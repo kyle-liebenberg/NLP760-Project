@@ -1,0 +1,28 @@
+{
+  "vocab_size": 2000,
+  "min_frequency": 2,
+  "max_seq_len": 846,
+  "percentile": 90,
+  "actual_vocab": 2000,
+  "num_classes": 6,
+  "classes": [
+    "Fanelesibonge Bengu",
+    "Mhlengi Shangase",
+    "Nokubongwa Phenyane",
+    "Nonkululeko Nhlapo",
+    "Sabelo Nsele",
+    "Zimbili Vilakazi"
+  ],
+  "X_train_shape": [
+    102,
+    846
+  ],
+  "X_val_shape": [
+    22,
+    846
+  ],
+  "X_test_shape": [
+    22,
+    846
+  ]
+}
