@@ -40,9 +40,9 @@ METRICS_DIR   = os.path.join("outputs", "metrics")
 TOKENIZER_PATH = os.path.join(TOKENIZER_DIR, "tokenizer.json")
 
 # ── Hyper-parameters ───────────────────────────────────────────────────────
-VOCAB_SIZE     = 2000   # small vocab → forces subword learning on small corpus
+VOCAB_SIZE     = 3000   # small vocab → forces subword learning on small corpus
 MIN_FREQUENCY  = 2      # ignore tokens appearing only once in training set
-PERCENTILE     = 90     # use 90th percentile of lengths as MAX_SEQ_LEN
+PERCENTILE     = 95     # use 90th percentile of lengths as MAX_SEQ_LEN
 RANDOM_STATE   = 42
 
 
@@ -169,6 +169,86 @@ def show_tokenization_examples(train_df, tokenizer, n=3):
         print(f"IDs    : {ids}")
     print("=" * 60)
 
+def evaluate_tokenizer(tokenizer, train_seqs, val_seqs, test_seqs,
+                       train_texts, val_texts, test_texts,
+                       max_len):
+    """
+    Evaluate tokenizer quality for authorship attribution.
+
+    Metrics:
+    --------
+    1. UNK token rate
+    2. Fertility (subwords per word)
+    3. Truncation percentage
+    4. Vocabulary coverage
+    """
+
+    print("\n" + "=" * 60)
+    print("TOKENIZER EVALUATION")
+    print("=" * 60)
+
+    # ------------------------------------------------------------
+    # 1. UNK RATE
+    # ------------------------------------------------------------
+    unk_id = tokenizer.token_to_id("[UNK]")
+
+    all_seqs = train_seqs + val_seqs + test_seqs
+    total_tokens = sum(len(seq) for seq in all_seqs)
+
+    unk_tokens = sum(
+        token == unk_id
+        for seq in all_seqs
+        for token in seq
+    )
+
+    unk_rate = (unk_tokens / total_tokens) * 100
+
+    print(f"[UNK rate]          {unk_rate:.2f}%")
+
+    # ------------------------------------------------------------
+    # 2. FERTILITY
+    # ------------------------------------------------------------
+    all_texts = train_texts + val_texts + test_texts
+
+    total_words = sum(len(text.split()) for text in all_texts)
+
+    fertility = total_tokens / total_words
+
+    print(f"[fertility]         {fertility:.2f} subwords/word")
+
+    # ------------------------------------------------------------
+    # 3. TRUNCATION RATE
+    # ------------------------------------------------------------
+    truncated = sum(len(seq) > max_len for seq in all_seqs)
+
+    trunc_rate = (truncated / len(all_seqs)) * 100
+
+    print(f"[truncation rate]   {trunc_rate:.2f}%")
+
+    # ------------------------------------------------------------
+    # 4. VOCAB COVERAGE
+    # ------------------------------------------------------------
+    vocab_size = tokenizer.get_vocab_size()
+
+    used_tokens = set(
+        token
+        for seq in all_seqs
+        for token in seq
+    )
+
+    coverage = (len(used_tokens) / vocab_size) * 100
+
+    print(f"[vocab coverage]    {coverage:.2f}%")
+
+    print("=" * 60)
+
+    # Return metrics for saving later
+    return {
+        "unk_rate_percent": round(unk_rate, 4),
+        "fertility": round(fertility, 4),
+        "truncation_rate_percent": round(trunc_rate, 4),
+        "vocab_coverage_percent": round(coverage, 4),
+    }
 
 def save_arrays(X_train, X_val, X_test, y_train, y_val, y_test,
                 le, max_len, tokenizer):
@@ -235,6 +315,18 @@ def run():
 
     # --- Show examples ---
     show_tokenization_examples(train_df, tokenizer)
+
+    # --- Evaluate tokenizer ---
+    tokenizer_metrics = evaluate_tokenizer(
+        tokenizer,
+        train_seqs,
+        val_seqs,
+        test_seqs,
+        train_df["text"].tolist(),
+        val_df["text"].tolist(),
+        test_df["text"].tolist(),
+        max_len
+    )
 
     # --- Save everything ---
     save_arrays(X_train, X_val, X_test, y_train, y_val, y_test,

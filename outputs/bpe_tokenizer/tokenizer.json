@@ -2037,7 +2037,1007 @@
       "thupha": 1996,
       "thunye": 1997,
       "woMnyango": 1998,
-      "muke": 1999
+      "muke": 1999,
+      "hox": 2000,
+      "ngokuhlanga": 2001,
+      "fakwe": 2002,
+      "toli": 2003,
+      "ngenzeka": 2004,
+      "Sifuna": 2005,
+      "nuwari": 2006,
+      "dili": 2007,
+      "Kufanele": 2008,
+      "khathini": 2009,
+      "ril": 2010,
+      "nokunye": 2011,
+      "imininingwane": 2012,
+      "wula": 2013,
+      "daka": 2014,
+      "shelwe": 2015,
+      "sheshe": 2016,
+      "bulawe": 2017,
+      "UMHO": 2018,
+      "vundla": 2019,
+      "hluleka": 2020,
+      "namaphoyisa": 2021,
+      "vimba": 2022,
+      "zwakala": 2023,
+      "kuzokwenza": 2024,
+      "umoya": 2025,
+      "emalo": 2026,
+      "nyuke": 2027,
+      "nyunyana": 2028,
+      "kubantu": 2029,
+      "thethosisekelo": 2030,
+      "UNksz": 2031,
+      "Umthombo": 2032,
+      "enyeze": 2033,
+      "SAP": 2034,
+      "retoria": 2035,
+      "joyi": 2036,
+      "jovo": 2037,
+      "waseM": 2038,
+      "assa": 2039,
+      "ngoLwesibili": 2040,
+      "ngoLwesithathu": 2041,
+      "nxusa": 2042,
+      "kusasa": 2043,
+      "qhamuka": 2044,
+      "Januwari": 2045,
+      "sebenzisana": 2046,
+      "sakazo": 2047,
+      "Gaute": 2048,
+      "Car": 2049,
+      "Unite": 2050,
+      "lisile": 2051,
+      "Okunye": 2052,
+      "basekhaya": 2053,
+      "jwayelekile": 2054,
+      "HIV": 2055,
+      "Shayamthetho": 2056,
+      "dutshulwa": 2057,
+      "osaziwayo": 2058,
+      "njengamanje": 2059,
+      "omusha": 2060,
+      "izinguquko": 2061,
+      "zakhamuzi": 2062,
+      "Billing": 2063,
+      "hanjelwe": 2064,
+      "Durban": 2065,
+      "KZN": 2066,
+      "Kwenzeka": 2067,
+      "screen": 2068,
+      "thikithi": 2069,
+      "Magic": 2070,
+      "ngokuhlanganyela": 2071,
+      "UMHOLI": 2072,
+      "Gauteng": 2073,
+      "17": 2074,
+      "25": 2075,
+      "AB": 2076,
+      "Ar": 2077,
+      "Aya": 2078,
+      "Angi": 2079,
+      "Auto": 2080,
+      "Dla": 2081,
+      "Ezi": 2082,
+      "Edu": 2083,
+      "Fe": 2084,
+      "Festival": 2085,
+      "Go": 2086,
+      "Gwar": 2087,
+      "Hap": 2088,
+      "Laba": 2089,
+      "Lezi": 2090,
+      "Leli": 2091,
+      "Nt": 2092,
+      "Ningizimu": 2093,
+      "Omunye": 2094,
+      "Pe": 2095,
+      "SUV": 2096,
+      "Sassa": 2097,
+      "TH": 2098,
+      "Te": 2099,
+      "To": 2100,
+      "Uqhube": 2101,
+      "UMasemola": 2102,
+      "ZE": 2103,
+      "asu": 2104,
+      "dtu": 2105,
+      "eng": 2106,
+      "eyoku": 2107,
+      "ezweni": 2108,
+      "eyokuthi": 2109,
+      "fe": 2110,
+      "ff": 2111,
+      "fini": 2112,
+      "hy": 2113,
+      "ic": 2114,
+      "ima": 2115,
+      "iva": 2116,
+      "ikakhulu": 2117,
+      "impi": 2118,
+      "iSilo": 2119,
+      "indoda": 2120,
+      "jele": 2121,
+      "nce": 2122,
+      "ncwa": 2123,
+      "onga": 2124,
+      "oMnyango": 2125,
+      "ohlelweni": 2126,
+      "py": 2127,
+      "rhu": 2128,
+      "ty": 2129,
+      "tri": 2130,
+      "tlala": 2131,
+      "ungo": 2132,
+      "ubo": 2133,
+      "uch": 2134,
+      "ushu": 2135,
+      "kuda": 2136,
+      "kuvele": 2137,
+      "kusuke": 2138,
+      "lana": 2139,
+      "layi": 2140,
+      "bama": 2141,
+      "bathe": 2142,
+      "bakhe": 2143,
+      "bakwazi": 2144,
+      "wala": 2145,
+      "wami": 2146,
+      "zibe": 2147,
+      "encane": 2148,
+      "kaG": 2149,
+      "kaze": 2150,
+      "khwama": 2151,
+      "mazi": 2152,
+      "lilo": 2153,
+      "wethimba": 2154,
+      "weMKP": 2155,
+      "ndisi": 2156,
+      "set": 2157,
+      "selu": 2158,
+      "ngabo": 2159,
+      "ngawo": 2160,
+      "okuzo": 2161,
+      "okuningi": 2162,
+      "okufanele": 2163,
+      "yayi": 2164,
+      "sabantu": 2165,
+      "abase": 2166,
+      "abasha": 2167,
+      "abafuna": 2168,
+      "ntweni": 2169,
+      "yizo": 2170,
+      "yiswa": 2171,
+      "yiseni": 2172,
+      "yimpoqo": 2173,
+      "buke": 2174,
+      "buyela": 2175,
+      "zobu": 2176,
+      "ngozi": 2177,
+      "ngoJuni": 2178,
+      "zana": 2179,
+      "zathu": 2180,
+      "thelela": 2181,
+      "umlando": 2182,
+      "umgilwa": 2183,
+      "bonga": 2184,
+      "bophe": 2185,
+      "zeke": 2186,
+      "zemi": 2187,
+      "mizwa": 2188,
+      "misele": 2189,
+      "ngecala": 2190,
+      "khokha": 2191,
+      "khono": 2192,
+      "yolibofuzo": 2193,
+      "phara": 2194,
+      "khungo": 2195,
+      "som": 2196,
+      "sotho": 2197,
+      "somabhizinisi": 2198,
+      "hambisana": 2199,
+      "izikhala": 2200,
+      "izikole": 2201,
+      "izibonelelo": 2202,
+      "noM": 2203,
+      "notho": 2204,
+      "hlango": 2205,
+      "emgwa": 2206,
+      "ngisa": 2207,
+      "njenge": 2208,
+      "huzani": 2209,
+      "kweSilo": 2210,
+      "esikh": 2211,
+      "esinga": 2212,
+      "eside": 2213,
+      "esikoleni": 2214,
+      "nyathelo": 2215,
+      "nguNgqongqoshe": 2216,
+      "Matlala": 2217,
+      "isikole": 2218,
+      "bene": 2219,
+      "worth": 2220,
+      "khulume": 2221,
+      "holele": 2222,
+      "endeni": 2223,
+      "endoda": 2224,
+      "phoyiseni": 2225,
+      "pheli": 2226,
+      "ngokubambisana": 2227,
+      "sebenzela": 2228,
+      "vaka": 2229,
+      "phile": 2230,
+      "dingo": 2231,
+      "dier": 2232,
+      "Kule": 2233,
+      "kwente": 2234,
+      "riga": 2235,
+      "caleni": 2236,
+      "cation": 2237,
+      "hlola": 2238,
+      "fiso": 2239,
+      "finye": 2240,
+      "nokuzi": 2241,
+      "inkampani": 2242,
+      "teji": 2243,
+      "teshini": 2244,
+      "gada": 2245,
+      "qashwe": 2246,
+      "vunye": 2247,
+      "hlungu": 2248,
+      "izinkampani": 2249,
+      "njalo": 2250,
+      "njaro": 2251,
+      "hlangana": 2252,
+      "yuke": 2253,
+      "ekufundi": 2254,
+      "National": 2255,
+      "ngaphambili": 2256,
+      "vide": 2257,
+      "ville": 2258,
+      "kwazise": 2259,
+      "emahhovisi": 2260,
+      "phuza": 2261,
+      "kukaphethroli": 2262,
+      "giso": 2263,
+      "ezepolitiki": 2264,
+      "mboni": 2265,
+      "akukho": 2266,
+      "engaka": 2267,
+      "emihlanu": 2268,
+      "eminyakeni": 2269,
+      "Lesotho": 2270,
+      "Ngiya": 2271,
+      "wokuthi": 2272,
+      "ngqongqoshe": 2273,
+      "ndawonye": 2274,
+      "senkantolo": 2275,
+      "thandana": 2276,
+      "esezi": 2277,
+      "wenza": 2278,
+      "uMazibuko": 2279,
+      "phethwe": 2280,
+      "igh": 2281,
+      "ebengi": 2282,
+      "ngomculo": 2283,
+      "ngomlando": 2284,
+      "uThula": 2285,
+      "lly": 2286,
+      "phenya": 2287,
+      "mpelasonto": 2288,
+      "khokhelwe": 2289,
+      "phawule": 2290,
+      "qhaza": 2291,
+      "bezindaba": 2292,
+      "hlonipha": 2293,
+      "gebenga": 2294,
+      "kulumo": 2295,
+      "wamaPhoyisa": 2296,
+      "sakazweni": 2297,
+      "memezela": 2298,
+      "Insta": 2299,
+      "mhlanje": 2300,
+      "Chana": 2301,
+      "khumbu": 2302,
+      "uLongwe": 2303,
+      "uLondie": 2304,
+      "wezokuThu": 2305,
+      "yoMphakathi": 2306,
+      "yoMthethosisekelo": 2307,
+      "Thami": 2308,
+      "orts": 2309,
+      "nqoba": 2310,
+      "App": 2311,
+      "intela": 2312,
+      "dlwengula": 2313,
+      "West": 2314,
+      "hlanhla": 2315,
+      "phesheya": 2316,
+      "abesifazane": 2317,
+      "hlinzeka": 2318,
+      "ilitha": 2319,
+      "komiti": 2320,
+      "phakamiso": 2321,
+      "Fannie": 2322,
+      "kilasini": 2323,
+      "dakamizwa": 2324,
+      "SAPS": 2325,
+      "Education": 2326,
+      "Gwarube": 2327,
+      "Happy": 2328,
+      "rhuleni": 2329,
+      "pharafini": 2330,
+      "kwentengo": 2331,
+      "rigadier": 2332,
+      "uThulani": 2333,
+      "Instagram": 2334,
+      ").": 2335,
+      "11": 2336,
+      "16": 2337,
+      "18": 2338,
+      "100": 2339,
+      "78": 2340,
+      "Award": 2341,
+      "Baba": 2342,
+      "Bhe": 2343,
+      "Cya": 2344,
+      "Cent": 2345,
+      "CUL": 2346,
+      "Di": 2347,
+      "Fo": 2348,
+      "General": 2349,
+      "HAN": 2350,
+      "High": 2351,
+      "IE": 2352,
+      "IM": 2353,
+      "KE": 2354,
+      "KM": 2355,
+      "Kle": 2356,
+      "Mp": 2357,
+      "Melika": 2358,
+      "Nta": 2359,
+      "Ndunankulu": 2360,
+      "Ndlunkulu": 2361,
+      "Nje": 2362,
+      "OB": 2363,
+      "OS": 2364,
+      "PH": 2365,
+      "Pretoria": 2366,
+      "R7": 2367,
+      "Re": 2368,
+      "Su": 2369,
+      "Shaba": 2370,
+      "Th": 2371,
+      "Ubu": 2372,
+      "Uhulumeni": 2373,
+      "URamaphosa": 2374,
+      "Vele": 2375,
+      "WA": 2376,
+      "ake": 2377,
+      "ayo": 2378,
+      "angama": 2379,
+      "abenza": 2380,
+      "bri": 2381,
+      "cabanga": 2382,
+      "ction": 2383,
+      "dume": 2384,
+      "epha": 2385,
+      "efu": 2386,
+      "edi": 2387,
+      "ephakathi": 2388,
+      "iba": 2389,
+      "ine": 2390,
+      "isu": 2391,
+      "izwe": 2392,
+      "ifuna": 2393,
+      "iMKP": 2394,
+      "iNgonyama": 2395,
+      "iMbube": 2396,
+      "iqiniso": 2397,
+      "klo": 2398,
+      "lworth": 2399,
+      "menyeze": 2400,
+      "nweni": 2401,
+      "nsuku": 2402,
+      "nendlela": 2403,
+      "ono": 2404,
+      "okwe": 2405,
+      "okoku": 2406,
+      "qh": 2407,
+      "sti": 2408,
+      "tweni": 2409,
+      "tre": 2410,
+      "ul": 2411,
+      "unda": 2412,
+      "ukwazi": 2413,
+      "unike": 2414,
+      "uthole": 2415,
+      "uNgqongqoshe": 2416,
+      "uthando": 2417,
+      "uphawule": 2418,
+      "vumela": 2419,
+      "ywa": 2420,
+      "ywe": 2421,
+      "yho": 2422,
+      "zz": 2423,
+      "kuna": 2424,
+      "kude": 2425,
+      "kuningi": 2426,
+      "kuqhubeka": 2427,
+      "kulabo": 2428,
+      "kubuye": 2429,
+      "kugxi": 2430,
+      "kungenzeka": 2431,
+      "ngcindezi": 2432,
+      "bani": 2433,
+      "basa": 2434,
+      "bayi": 2435,
+      "leso": 2436,
+      "wam": 2437,
+      "wabe": 2438,
+      "waya": 2439,
+      "wane": 2440,
+      "wagcina": 2441,
+      "waveza": 2442,
+      "wabulawa": 2443,
+      "ziya": 2444,
+      "zingaka": 2445,
+      "enki": 2446,
+      "enjini": 2447,
+      "sigameko": 2448,
+      "sikole": 2449,
+      "kaZulu": 2450,
+      "kangaka": 2451,
+      "kaMadlanga": 2452,
+      "maqembu": 2453,
+      "liyo": 2454,
+      "ligh": 2455,
+      "lone": 2456,
+      "lodwa": 2457,
+      "wethu": 2458,
+      "pheni": 2459,
+      "phumu": 2460,
+      "ukuza": 2461,
+      "ukukhuluma": 2462,
+      "ukuvikela": 2463,
+      "ukuqokwa": 2464,
+      "ukubhekana": 2465,
+      "ndwa": 2466,
+      "ndela": 2467,
+      "seThekwini": 2468,
+      "nise": 2469,
+      "ningo": 2470,
+      "niswa": 2471,
+      "sh1": 2472,
+      "luzo": 2473,
+      "bezo": 2474,
+      "bekhona": 2475,
+      "beqembu": 2476,
+      "okulindeleke": 2477,
+      "yathi": 2478,
+      "abane": 2479,
+      "abaholi": 2480,
+      "abayisi": 2481,
+      "abashayeli": 2482,
+      "ntso": 2483,
+      "yicala": 2484,
+      "yePhasika": 2485,
+      "buyise": 2486,
+      "kelwa": 2487,
+      "zoM": 2488,
+      "zolo": 2489,
+      "ngosuku": 2490,
+      "ngoMashi": 2491,
+      "zame": 2492,
+      "thele": 2493,
+      "umsindo": 2494,
+      "umkhankaso": 2495,
+      "boba": 2496,
+      "boshiwe": 2497,
+      "zeli": 2498,
+      "kohla": 2499,
+      "ngemali": 2500,
+      "ngeminyaka": 2501,
+      "ngempilo": 2502,
+      "kholo": 2503,
+      "khuba": 2504,
+      "khule": 2505,
+      "khuza": 2506,
+      "khungweni": 2507,
+      "kwase": 2508,
+      "kwawo": 2509,
+      "kwalesi": 2510,
+      "kwalokho": 2511,
+      "kwamukela": 2512,
+      "sobu": 2513,
+      "sondo": 2514,
+      "hambi": 2515,
+      "izindawo": 2516,
+      "izikibha": 2517,
+      "izinyathelo": 2518,
+      "khasi": 2519,
+      "khakha": 2520,
+      "ezizo": 2521,
+      "eziyisi": 2522,
+      "amabolo": 2523,
+      "eme": 2524,
+      "embi": 2525,
+      "emhlanga": 2526,
+      "emsakazweni": 2527,
+      "ngisi": 2528,
+      "ngiya": 2529,
+      "ngizo": 2530,
+      "njengo": 2531,
+      "tholwa": 2532,
+      "thombe": 2533,
+      "kwese": 2534,
+      "kweminyaka": 2535,
+      "kisi": 2536,
+      "kiwe": 2537,
+      "nguM": 2538,
+      "Manje": 2539,
+      "Majozi": 2540,
+      "cial": 2541,
+      "isitatimende": 2542,
+      "benze": 2543,
+      "thulo": 2544,
+      "thunzi": 2545,
+      "wom": 2546,
+      "wokholo": 2547,
+      "endlini": 2548,
+      "ngokuba": 2549,
+      "uMkhwanazi": 2550,
+      "uMphathiswa": 2551,
+      "mbango": 2552,
+      "mond": 2553,
+      "touch": 2554,
+      "umasipala": 2555,
+      "ndile": 2556,
+      "ngenza": 2557,
+      "Simela": 2558,
+      "valwa": 2559,
+      "phiwe": 2560,
+      "Kuya": 2561,
+      "Kubikwa": 2562,
+      "Kurhuleni": 2563,
+      "kwenzile": 2564,
+      "susa": 2565,
+      "caca": 2566,
+      "tain": 2567,
+      "tile": 2568,
+      "zokushaja": 2569,
+      "imicimbi": 2570,
+      "imibuzo": 2571,
+      "yokugi": 2572,
+      "yokukhetha": 2573,
+      "dade": 2574,
+      "info": 2575,
+      "ran": 2576,
+      "qalile": 2577,
+      "eneminyaka": 2578,
+      "UMkhwanazi": 2579,
+      "gcini": 2580,
+      "gcize": 2581,
+      "lokubulala": 2582,
+      "hingo": 2583,
+      "Nanda": 2584,
+      "sty": 2585,
+      "vishini": 2586,
+      "zwaka": 2587,
+      "landele": 2588,
+      "email": 2589,
+      "emaphoyiseni": 2590,
+      "emakilasini": 2591,
+      "phutha": 2592,
+      "mbela": 2593,
+      "gula": 2594,
+      "cwaningo": 2595,
+      "nyusa": 2596,
+      "tholakale": 2597,
+      "gibeli": 2598,
+      "umuzi": 2599,
+      "Abasolwa": 2600,
+      "zinsolo": 2601,
+      "oluzayo": 2602,
+      "ndelene": 2603,
+      "Lewi": 2604,
+      "wokubambisana": 2605,
+      "Labo": 2606,
+      "ree": 2607,
+      "kwezinye": 2608,
+      "waseKurhuleni": 2609,
+      "ngezindlela": 2610,
+      "obeku": 2611,
+      "qede": 2612,
+      "qeda": 2613,
+      "chmond": 2614,
+      "wena": 2615,
+      "thishanhloko": 2616,
+      "hliziyo": 2617,
+      "ushonele": 2618,
+      "INDE": 2619,
+      "ebesi": 2620,
+      "kungabi": 2621,
+      "lungisa": 2622,
+      "balale": 2623,
+      "neminye": 2624,
+      "LED": 2625,
+      "nenkinga": 2626,
+      "Khozi": 2627,
+      "sizakala": 2628,
+      "hambele": 2629,
+      "Mina": 2630,
+      "Miss": 2631,
+      "hlonishwe": 2632,
+      "Ngakho": 2633,
+      "Metro": 2634,
+      "Meyiwa": 2635,
+      "wezeMfundo": 2636,
+      "Sadtu": 2637,
+      "ULU": 2638,
+      "nciphisa": 2639,
+      "xhaso": 2640,
+      "kwenzeke": 2641,
+      "Colone": 2642,
+      "uDuma": 2643,
+      "ngasekho": 2644,
+      "HALA": 2645,
+      "Holworth": 2646,
+      "besilisa": 2647,
+      "yalelo": 2648,
+      "khokhele": 2649,
+      "shiyaga": 2650,
+      "bonile": 2651,
+      "Lundi": 2652,
+      "osomabhizinisi": 2653,
+      "khumbula": 2654,
+      "African": 2655,
+      "dubulana": 2656,
+      "dutshulwe": 2657,
+      "Thato": 2658,
+      "Hill": 2659,
+      "okwamanje": 2660,
+      "uSduduzo": 2661,
+      "sunguli": 2662,
+      "phumelele": 2663,
+      "Cyril": 2664,
+      "zaseKha": 2665,
+      "lwamacala": 2666,
+      "dedelwa": 2667,
+      "nkosini": 2668,
+      "Kuzokhumbu": 2669,
+      "bhekise": 2670,
+      "dedela": 2671,
+      "nqamu": 2672,
+      "semthethweni": 2673,
+      "Park": 2674,
+      "ePitoli": 2675,
+      "Cape": 2676,
+      "Richmond": 2677,
+      "gqamisa": 2678,
+      "tshiunda": 2679,
+      "hlukume": 2680,
+      "kubhekwe": 2681,
+      "kaZwelithini": 2682,
+      "koMphakathi": 2683,
+      "diliza": 2684,
+      "Ntwana": 2685,
+      "Team": 2686,
+      "hybri": 2687,
+      "emgwaqweni": 2688,
+      "vakash": 2689,
+      "finyelele": 2690,
+      "ekufundiseni": 2691,
+      "video": 2692,
+      "esezingeni": 2693,
+      "Awards": 2694,
+      "Cyan": 2695,
+      "Klebe": 2696,
+      "OSHE": 2697,
+      "Velenkosini": 2698,
+      "kugxilwe": 2699,
+      "lights": 2700,
+      "kohlakalo": 2701,
+      "emhlanganweni": 2702,
+      "touchscreen": 2703,
+      "Simelane": 2704,
+      "tainment": 2705,
+      "yokugibela": 2706,
+      "infotainment": 2707,
+      "Lewis": 2708,
+      "Colonel": 2709,
+      "Holworthy": 2710,
+      "zaseKhaya": 2711,
+      "Kuzokhumbuleka": 2712,
+      "hybrid": 2713,
+      "\".": 2714,
+      "28": 2715,
+      "35": 2716,
+      "36": 2717,
+      "90": 2718,
+      "93": 2719,
+      ":\"": 2720,
+      "AC": 2721,
+      "And": 2722,
+      "Big": 2723,
+      "Ce": 2724,
+      "Cho": 2725,
+      "Chi": 2726,
+      "Dlu": 2727,
+      "DLA": 2728,
+      "Dise": 2729,
+      "ET": 2730,
+      "Eku": 2731,
+      "Emp": 2732,
+      "Fa": 2733,
+      "IC": 2734,
+      "IZ": 2735,
+      "Iya": 2736,
+      "Ithe": 2737,
+      "LAN": 2738,
+      "MA": 2739,
+      "MAN": 2740,
+      "Mbalula": 2741,
+      "Nto": 2742,
+      "Nda": 2743,
+      "Nhlanhla": 2744,
+      "OR": 2745,
+      "Okwa": 2746,
+      "Pla": 2747,
+      "Pri": 2748,
+      "RS": 2749,
+      "Rus": 2750,
+      "Ste": 2751,
+      "Seku": 2752,
+      "Spe": 2753,
+      "UZ": 2754,
+      "Ukuba": 2755,
+      "UXaba": 2756,
+      "YA": 2757,
+      "YE": 2758,
+      "ad": 2759,
+      "ar": 2760,
+      "alo": 2761,
+      "alu": 2762,
+      "aya": 2763,
+      "avu": 2764,
+      "angene": 2765,
+      "aqhubeke": 2766,
+      "asebenze": 2767,
+      "agiso": 2768,
+      "ct": 2769,
+      "eq": 2770,
+      "ethu": 2771,
+      "ephe": 2772,
+      "eqembu": 2773,
+      "esen": 2774,
+      "ebhekene": 2775,
+      "eduze": 2776,
+      "eut": 2777,
+      "eSho": 2778,
+      "eGauteng": 2779,
+      "festival": 2780,
+      "gqo": 2781,
+      "gqoka": 2782,
+      "iD": 2783,
+      "iM": 2784,
+      "ila": 2785,
+      "ina": 2786,
+      "iyo": 2787,
+      "ihla": 2788,
+      "ikhona": 2789,
+      "indi": 2790,
+      "isuka": 2791,
+      "iyona": 2792,
+      "iMo": 2793,
+      "ifika": 2794,
+      "ibuya": 2795,
+      "iCa": 2796,
+      "ithenda": 2797,
+      "izakhamuzi": 2798,
+      "juba": 2799,
+      "ld": 2800,
+      "lla": 2801,
+      "lwini": 2802,
+      "mnike": 2803,
+      "mnandi": 2804,
+      "mjovo": 2805,
+      "msakazo": 2806,
+      "mendeni": 2807,
+      "nthi": 2808,
+      "nco": 2809,
+      "nhlobo": 2810,
+      "nendoda": 2811,
+      "othi": 2812,
+      "ozayo": 2813,
+      "odlule": 2814,
+      "obala": 2815,
+      "oyedwa": 2816,
+      "ongasekho": 2817,
+      "pro": 2818,
+      "pas": 2819,
+      "qwaba": 2820,
+      "qwini": 2821,
+      "rg": 2822,
+      "rro": 2823,
+      "sy": 2824,
+      "tela": 2825,
+      "ub": 2826,
+      "ug": 2827,
+      "uli": 2828,
+      "unyaka": 2829,
+      "uhlu": 2830,
+      "usizo": 2831,
+      "uLi": 2832,
+      "uqale": 2833,
+      "uZo": 2834,
+      "utshele": 2835,
+      "uColonel": 2836,
+      "veni": 2837,
+      "vumele": 2838,
+      "vemba": 2839,
+      "xh": 2840,
+      "xusa": 2841,
+      "yk": 2842,
+      "zuku": 2843,
+      "zabantu": 2844,
+      "kula": 2845,
+      "kuma": 2846,
+      "kuyi": 2847,
+      "kukho": 2848,
+      "kuphi": 2849,
+      "kuve": 2850,
+      "kunzi": 2851,
+      "kubona": 2852,
+      "kundleni": 2853,
+      "kulolu": 2854,
+      "kufika": 2855,
+      "kukhombisa": 2856,
+      "kudala": 2857,
+      "kuMzansi": 2858,
+      "kuhlon": 2859,
+      "ngco": 2860,
+      "ngxo": 2861,
+      "thumela": 2862,
+      "lakho": 2863,
+      "layo": 2864,
+      "lakuleli": 2865,
+      "bam": 2866,
+      "bayo": 2867,
+      "banzi": 2868,
+      "babona": 2869,
+      "baphinde": 2870,
+      "baveze": 2871,
+      "bavele": 2872,
+      "bathole": 2873,
+      "baqhubeke": 2874,
+      "lena": 2875,
+      "lethe": 2876,
+      "lethu": 2877,
+      "wakwa": 2878,
+      "ziba": 2879,
+      "zingu": 2880,
+      "enkundleni": 2881,
+      "sia": 2882,
+      "sila": 2883,
+      "sithe": 2884,
+      "simo": 2885,
+      "sikhathi": 2886,
+      "sibalo": 2887,
+      "kaM": 2888,
+      "kanga": 2889,
+      "kadizili": 2890,
+      "kamufi": 2891,
+      "mane": 2892,
+      "mandla": 2893,
+      "makhelwane": 2894,
+      "matic": 2895,
+      "thile": 2896,
+      "linga": 2897,
+      "liya": 2898,
+      "liswa": 2899,
+      "linde": 2900,
+      "litre": 2901,
+      "namu": 2902,
+      "namhlanje": 2903,
+      "weMfundo": 2904,
+      "wezaseKhaya": 2905,
+      "ukukhu": 2906,
+      "ukumela": 2907,
+      "ukuqhubeka": 2908,
+      "ukubuya": 2909,
+      "ukutholakala": 2910,
+      "ndu": 2911,
+      "ndwe": 2912,
+      "ndweni": 2913,
+      "selwe": 2914,
+      "seNkantolo": 2915,
+      "ngaba": 2916,
+      "ngamele": 2917,
+      "ngalolu": 2918,
+      "ngaphezu": 2919,
+      "shisi": 2920,
+      "lunye": 2921,
+      "beke": 2922,
+      "bewu": 2923,
+      "bekhala": 2924,
+      "okudlwengula": 2925,
+      "yalo": 2926,
+      "yazo": 2927,
+      "sazi": 2928,
+      "sayi": 2929,
+      "sanda": 2930,
+      "abasi": 2931,
+      "abangu": 2932,
+      "abanama": 2933,
+      "abahlukene": 2934,
+      "abaNtwana": 2935,
+      "nethi": 2936,
+      "necala": 2937,
+      "ntsha": 2938,
+      "yingakho": 2939,
+      "yeminyaka": 2940,
+      "bukho": 2941,
+      "bugebengu": 2942,
+      "keka": 2943,
+      "kelo": 2944,
+      "kethe": 2945,
+      "ngokwenza": 2946,
+      "ngodaba": 2947,
+      "ngoFe": 2948,
+      "zali": 2949,
+      "zamo": 2950,
+      "thembi": 2951,
+      "umfundi": 2952,
+      "umholi": 2953,
+      "umisa": 2954,
+      "umhlaba": 2955,
+      "umyeni": 2956,
+      "umyalezo": 2957,
+      "umfowabo": 2958,
+      "bonge": 2959,
+      "zezinto": 2960,
+      "kona": 2961,
+      "mina": 2962,
+      "misiwe": 2963,
+      "ngelwe": 2964,
+      "ngesonto": 2965,
+      "bile": 2966,
+      "bika": 2967,
+      "khotha": 2968,
+      "lwanga": 2969,
+      "lwayo": 2970,
+      "nji": 2971,
+      "pham": 2972,
+      "kwathiwa": 2973,
+      "soli": 2974,
+      "fune": 2975,
+      "fundeni": 2976,
+      "izingoma": 2977,
+      "izindleko": 2978,
+      "izimpahla": 2979,
+      "izikhotha": 2980,
+      "khanda": 2981,
+      "khawu": 2982,
+      "khandlu": 2983,
+      "nokho": 2984,
+      "noLamiez": 2985,
+      "noNksz": 2986,
+      "nozakwabo": 2987,
+      "ezine": 2988,
+      "ezingeni": 2989,
+      "ezingekho": 2990,
+      "amanye": 2991,
+      "amakhamera": 2992,
+      "amathikithi": 2993,
+      "emcu": 2994,
+      "empi": 2995,
+      "emthethweni": 2996,
+      "ngithi": 2997,
+      "nginga": 2998,
+      "elakuleli": 2999
     },
     "merges": [
       [
@@ -9647,6 +10647,4006 @@
       [
         "mu",
         "ke"
+      ],
+      [
+        "ho",
+        "x"
+      ],
+      [
+        "ngoku",
+        "hlanga"
+      ],
+      [
+        "fa",
+        "kwe"
+      ],
+      [
+        "to",
+        "li"
+      ],
+      [
+        "ngen",
+        "zeka"
+      ],
+      [
+        "Si",
+        "funa"
+      ],
+      [
+        "nu",
+        "wari"
+      ],
+      [
+        "di",
+        "li"
+      ],
+      [
+        "Ku",
+        "fanele"
+      ],
+      [
+        "khathi",
+        "ni"
+      ],
+      [
+        "ri",
+        "l"
+      ],
+      [
+        "noku",
+        "nye"
+      ],
+      [
+        "imi",
+        "niningwane"
+      ],
+      [
+        "wu",
+        "la"
+      ],
+      [
+        "da",
+        "ka"
+      ],
+      [
+        "she",
+        "lwe"
+      ],
+      [
+        "she",
+        "she"
+      ],
+      [
+        "bula",
+        "we"
+      ],
+      [
+        "UM",
+        "HO"
+      ],
+      [
+        "vu",
+        "ndla"
+      ],
+      [
+        "hlu",
+        "leka"
+      ],
+      [
+        "nama",
+        "phoyisa"
+      ],
+      [
+        "vi",
+        "mba"
+      ],
+      [
+        "zwa",
+        "kala"
+      ],
+      [
+        "kuzo",
+        "kwenza"
+      ],
+      [
+        "umo",
+        "ya"
+      ],
+      [
+        "ema",
+        "lo"
+      ],
+      [
+        "nyu",
+        "ke"
+      ],
+      [
+        "nyu",
+        "nyana"
+      ],
+      [
+        "kuba",
+        "ntu"
+      ],
+      [
+        "thetho",
+        "sisekelo"
+      ],
+      [
+        "UN",
+        "ksz"
+      ],
+      [
+        "Um",
+        "thombo"
+      ],
+      [
+        "enye",
+        "ze"
+      ],
+      [
+        "SA",
+        "P"
+      ],
+      [
+        "re",
+        "toria"
+      ],
+      [
+        "jo",
+        "yi"
+      ],
+      [
+        "jo",
+        "vo"
+      ],
+      [
+        "wase",
+        "M"
+      ],
+      [
+        "as",
+        "sa"
+      ],
+      [
+        "ngoLwesi",
+        "bili"
+      ],
+      [
+        "ngoLwesi",
+        "thathu"
+      ],
+      [
+        "nx",
+        "usa"
+      ],
+      [
+        "kusa",
+        "sa"
+      ],
+      [
+        "qha",
+        "muka"
+      ],
+      [
+        "Ja",
+        "nuwari"
+      ],
+      [
+        "sebenzisa",
+        "na"
+      ],
+      [
+        "saka",
+        "zo"
+      ],
+      [
+        "Ga",
+        "ute"
+      ],
+      [
+        "Ca",
+        "r"
+      ],
+      [
+        "Uni",
+        "te"
+      ],
+      [
+        "lisi",
+        "le"
+      ],
+      [
+        "Oku",
+        "nye"
+      ],
+      [
+        "base",
+        "khaya"
+      ],
+      [
+        "jwaye",
+        "lekile"
+      ],
+      [
+        "HI",
+        "V"
+      ],
+      [
+        "Sha",
+        "yamthetho"
+      ],
+      [
+        "dutshu",
+        "lwa"
+      ],
+      [
+        "osa",
+        "ziwayo"
+      ],
+      [
+        "njengama",
+        "nje"
+      ],
+      [
+        "omu",
+        "sha"
+      ],
+      [
+        "izingu",
+        "quko"
+      ],
+      [
+        "zakha",
+        "muzi"
+      ],
+      [
+        "Bi",
+        "lling"
+      ],
+      [
+        "hanje",
+        "lwe"
+      ],
+      [
+        "Dur",
+        "ban"
+      ],
+      [
+        "KZ",
+        "N"
+      ],
+      [
+        "Kwen",
+        "zeka"
+      ],
+      [
+        "scre",
+        "en"
+      ],
+      [
+        "thiki",
+        "thi"
+      ],
+      [
+        "Magi",
+        "c"
+      ],
+      [
+        "ngokuhlanga",
+        "nyela"
+      ],
+      [
+        "UMHO",
+        "LI"
+      ],
+      [
+        "Gaute",
+        "ng"
+      ],
+      [
+        "1",
+        "7"
+      ],
+      [
+        "2",
+        "5"
+      ],
+      [
+        "A",
+        "B"
+      ],
+      [
+        "A",
+        "r"
+      ],
+      [
+        "A",
+        "ya"
+      ],
+      [
+        "A",
+        "ngi"
+      ],
+      [
+        "A",
+        "uto"
+      ],
+      [
+        "D",
+        "la"
+      ],
+      [
+        "E",
+        "zi"
+      ],
+      [
+        "E",
+        "du"
+      ],
+      [
+        "F",
+        "e"
+      ],
+      [
+        "F",
+        "estival"
+      ],
+      [
+        "G",
+        "o"
+      ],
+      [
+        "G",
+        "war"
+      ],
+      [
+        "H",
+        "ap"
+      ],
+      [
+        "L",
+        "aba"
+      ],
+      [
+        "L",
+        "ezi"
+      ],
+      [
+        "L",
+        "eli"
+      ],
+      [
+        "N",
+        "t"
+      ],
+      [
+        "N",
+        "ingizimu"
+      ],
+      [
+        "O",
+        "munye"
+      ],
+      [
+        "P",
+        "e"
+      ],
+      [
+        "S",
+        "UV"
+      ],
+      [
+        "S",
+        "assa"
+      ],
+      [
+        "T",
+        "H"
+      ],
+      [
+        "T",
+        "e"
+      ],
+      [
+        "T",
+        "o"
+      ],
+      [
+        "U",
+        "qhube"
+      ],
+      [
+        "U",
+        "Masemola"
+      ],
+      [
+        "Z",
+        "E"
+      ],
+      [
+        "a",
+        "su"
+      ],
+      [
+        "d",
+        "tu"
+      ],
+      [
+        "e",
+        "ng"
+      ],
+      [
+        "e",
+        "yoku"
+      ],
+      [
+        "e",
+        "zweni"
+      ],
+      [
+        "e",
+        "yokuthi"
+      ],
+      [
+        "f",
+        "e"
+      ],
+      [
+        "f",
+        "f"
+      ],
+      [
+        "f",
+        "ini"
+      ],
+      [
+        "h",
+        "y"
+      ],
+      [
+        "i",
+        "c"
+      ],
+      [
+        "i",
+        "ma"
+      ],
+      [
+        "i",
+        "va"
+      ],
+      [
+        "i",
+        "kakhulu"
+      ],
+      [
+        "i",
+        "mpi"
+      ],
+      [
+        "i",
+        "Silo"
+      ],
+      [
+        "i",
+        "ndoda"
+      ],
+      [
+        "j",
+        "ele"
+      ],
+      [
+        "n",
+        "ce"
+      ],
+      [
+        "n",
+        "cwa"
+      ],
+      [
+        "o",
+        "nga"
+      ],
+      [
+        "o",
+        "Mnyango"
+      ],
+      [
+        "o",
+        "hlelweni"
+      ],
+      [
+        "p",
+        "y"
+      ],
+      [
+        "r",
+        "hu"
+      ],
+      [
+        "t",
+        "y"
+      ],
+      [
+        "t",
+        "ri"
+      ],
+      [
+        "t",
+        "lala"
+      ],
+      [
+        "u",
+        "ngo"
+      ],
+      [
+        "u",
+        "bo"
+      ],
+      [
+        "u",
+        "ch"
+      ],
+      [
+        "u",
+        "shu"
+      ],
+      [
+        "ku",
+        "da"
+      ],
+      [
+        "ku",
+        "vele"
+      ],
+      [
+        "ku",
+        "suke"
+      ],
+      [
+        "la",
+        "na"
+      ],
+      [
+        "la",
+        "yi"
+      ],
+      [
+        "ba",
+        "ma"
+      ],
+      [
+        "ba",
+        "the"
+      ],
+      [
+        "ba",
+        "khe"
+      ],
+      [
+        "ba",
+        "kwazi"
+      ],
+      [
+        "wa",
+        "la"
+      ],
+      [
+        "wa",
+        "mi"
+      ],
+      [
+        "zi",
+        "be"
+      ],
+      [
+        "en",
+        "cane"
+      ],
+      [
+        "ka",
+        "G"
+      ],
+      [
+        "ka",
+        "ze"
+      ],
+      [
+        "kh",
+        "wama"
+      ],
+      [
+        "ma",
+        "zi"
+      ],
+      [
+        "li",
+        "lo"
+      ],
+      [
+        "we",
+        "thimba"
+      ],
+      [
+        "we",
+        "MKP"
+      ],
+      [
+        "nd",
+        "isi"
+      ],
+      [
+        "se",
+        "t"
+      ],
+      [
+        "se",
+        "lu"
+      ],
+      [
+        "nga",
+        "bo"
+      ],
+      [
+        "nga",
+        "wo"
+      ],
+      [
+        "oku",
+        "zo"
+      ],
+      [
+        "oku",
+        "ningi"
+      ],
+      [
+        "oku",
+        "fanele"
+      ],
+      [
+        "ya",
+        "yi"
+      ],
+      [
+        "sa",
+        "bantu"
+      ],
+      [
+        "aba",
+        "se"
+      ],
+      [
+        "aba",
+        "sha"
+      ],
+      [
+        "aba",
+        "funa"
+      ],
+      [
+        "nt",
+        "weni"
+      ],
+      [
+        "yi",
+        "zo"
+      ],
+      [
+        "yi",
+        "swa"
+      ],
+      [
+        "yi",
+        "seni"
+      ],
+      [
+        "yi",
+        "mpoqo"
+      ],
+      [
+        "bu",
+        "ke"
+      ],
+      [
+        "bu",
+        "yela"
+      ],
+      [
+        "zo",
+        "bu"
+      ],
+      [
+        "ngo",
+        "zi"
+      ],
+      [
+        "ngo",
+        "Juni"
+      ],
+      [
+        "za",
+        "na"
+      ],
+      [
+        "za",
+        "thu"
+      ],
+      [
+        "the",
+        "lela"
+      ],
+      [
+        "um",
+        "lando"
+      ],
+      [
+        "um",
+        "gilwa"
+      ],
+      [
+        "bo",
+        "nga"
+      ],
+      [
+        "bo",
+        "phe"
+      ],
+      [
+        "ze",
+        "ke"
+      ],
+      [
+        "ze",
+        "mi"
+      ],
+      [
+        "mi",
+        "zwa"
+      ],
+      [
+        "mi",
+        "sele"
+      ],
+      [
+        "nge",
+        "cala"
+      ],
+      [
+        "kho",
+        "kha"
+      ],
+      [
+        "kho",
+        "no"
+      ],
+      [
+        "yo",
+        "libofuzo"
+      ],
+      [
+        "pha",
+        "ra"
+      ],
+      [
+        "khu",
+        "ngo"
+      ],
+      [
+        "so",
+        "m"
+      ],
+      [
+        "so",
+        "tho"
+      ],
+      [
+        "so",
+        "mabhizinisi"
+      ],
+      [
+        "ha",
+        "mbisana"
+      ],
+      [
+        "izi",
+        "khala"
+      ],
+      [
+        "izi",
+        "kole"
+      ],
+      [
+        "izi",
+        "bonelelo"
+      ],
+      [
+        "no",
+        "M"
+      ],
+      [
+        "no",
+        "tho"
+      ],
+      [
+        "hla",
+        "ngo"
+      ],
+      [
+        "em",
+        "gwa"
+      ],
+      [
+        "ngi",
+        "sa"
+      ],
+      [
+        "nje",
+        "nge"
+      ],
+      [
+        "hu",
+        "zani"
+      ],
+      [
+        "kwe",
+        "Silo"
+      ],
+      [
+        "esi",
+        "kh"
+      ],
+      [
+        "esi",
+        "nga"
+      ],
+      [
+        "esi",
+        "de"
+      ],
+      [
+        "esi",
+        "koleni"
+      ],
+      [
+        "nya",
+        "thelo"
+      ],
+      [
+        "ngu",
+        "Ngqongqoshe"
+      ],
+      [
+        "Ma",
+        "tlala"
+      ],
+      [
+        "isi",
+        "kole"
+      ],
+      [
+        "ben",
+        "e"
+      ],
+      [
+        "wo",
+        "rth"
+      ],
+      [
+        "khulu",
+        "me"
+      ],
+      [
+        "ho",
+        "lele"
+      ],
+      [
+        "end",
+        "eni"
+      ],
+      [
+        "end",
+        "oda"
+      ],
+      [
+        "pho",
+        "yiseni"
+      ],
+      [
+        "phe",
+        "li"
+      ],
+      [
+        "ngoku",
+        "bambisana"
+      ],
+      [
+        "seben",
+        "zela"
+      ],
+      [
+        "va",
+        "ka"
+      ],
+      [
+        "phi",
+        "le"
+      ],
+      [
+        "di",
+        "ngo"
+      ],
+      [
+        "di",
+        "er"
+      ],
+      [
+        "Ku",
+        "le"
+      ],
+      [
+        "kwen",
+        "te"
+      ],
+      [
+        "ri",
+        "ga"
+      ],
+      [
+        "ca",
+        "leni"
+      ],
+      [
+        "ca",
+        "tion"
+      ],
+      [
+        "hlo",
+        "la"
+      ],
+      [
+        "fi",
+        "so"
+      ],
+      [
+        "fi",
+        "nye"
+      ],
+      [
+        "noku",
+        "zi"
+      ],
+      [
+        "in",
+        "kampani"
+      ],
+      [
+        "te",
+        "ji"
+      ],
+      [
+        "te",
+        "shini"
+      ],
+      [
+        "ga",
+        "da"
+      ],
+      [
+        "qa",
+        "shwe"
+      ],
+      [
+        "vu",
+        "nye"
+      ],
+      [
+        "hlu",
+        "ngu"
+      ],
+      [
+        "izin",
+        "kampani"
+      ],
+      [
+        "nja",
+        "lo"
+      ],
+      [
+        "nja",
+        "ro"
+      ],
+      [
+        "hlanga",
+        "na"
+      ],
+      [
+        "yu",
+        "ke"
+      ],
+      [
+        "eku",
+        "fundi"
+      ],
+      [
+        "Na",
+        "tional"
+      ],
+      [
+        "ngapha",
+        "mbili"
+      ],
+      [
+        "vi",
+        "de"
+      ],
+      [
+        "vi",
+        "lle"
+      ],
+      [
+        "kwazi",
+        "se"
+      ],
+      [
+        "ema",
+        "hhovisi"
+      ],
+      [
+        "phu",
+        "za"
+      ],
+      [
+        "kuka",
+        "phethroli"
+      ],
+      [
+        "gi",
+        "so"
+      ],
+      [
+        "eze",
+        "politiki"
+      ],
+      [
+        "mbo",
+        "ni"
+      ],
+      [
+        "aku",
+        "kho"
+      ],
+      [
+        "enga",
+        "ka"
+      ],
+      [
+        "emi",
+        "hlanu"
+      ],
+      [
+        "emi",
+        "nyakeni"
+      ],
+      [
+        "Le",
+        "sotho"
+      ],
+      [
+        "Ngi",
+        "ya"
+      ],
+      [
+        "woku",
+        "thi"
+      ],
+      [
+        "ngqo",
+        "ngqoshe"
+      ],
+      [
+        "ndawo",
+        "nye"
+      ],
+      [
+        "sen",
+        "kantolo"
+      ],
+      [
+        "thanda",
+        "na"
+      ],
+      [
+        "ese",
+        "zi"
+      ],
+      [
+        "wen",
+        "za"
+      ],
+      [
+        "uMa",
+        "zibuko"
+      ],
+      [
+        "pheth",
+        "we"
+      ],
+      [
+        "ig",
+        "h"
+      ],
+      [
+        "ebe",
+        "ngi"
+      ],
+      [
+        "ngom",
+        "culo"
+      ],
+      [
+        "ngom",
+        "lando"
+      ],
+      [
+        "uT",
+        "hula"
+      ],
+      [
+        "ll",
+        "y"
+      ],
+      [
+        "phen",
+        "ya"
+      ],
+      [
+        "mpela",
+        "sonto"
+      ],
+      [
+        "khokhe",
+        "lwe"
+      ],
+      [
+        "phawu",
+        "le"
+      ],
+      [
+        "qha",
+        "za"
+      ],
+      [
+        "bezi",
+        "ndaba"
+      ],
+      [
+        "hloni",
+        "pha"
+      ],
+      [
+        "gebe",
+        "nga"
+      ],
+      [
+        "kulu",
+        "mo"
+      ],
+      [
+        "wama",
+        "Phoyisa"
+      ],
+      [
+        "saka",
+        "zweni"
+      ],
+      [
+        "memeze",
+        "la"
+      ],
+      [
+        "In",
+        "sta"
+      ],
+      [
+        "mhla",
+        "nje"
+      ],
+      [
+        "Cha",
+        "na"
+      ],
+      [
+        "khum",
+        "bu"
+      ],
+      [
+        "uLo",
+        "ngwe"
+      ],
+      [
+        "uLo",
+        "ndie"
+      ],
+      [
+        "wezoku",
+        "Thu"
+      ],
+      [
+        "yoM",
+        "phakathi"
+      ],
+      [
+        "yoM",
+        "thethosisekelo"
+      ],
+      [
+        "Tha",
+        "mi"
+      ],
+      [
+        "ort",
+        "s"
+      ],
+      [
+        "nqo",
+        "ba"
+      ],
+      [
+        "Ap",
+        "p"
+      ],
+      [
+        "int",
+        "ela"
+      ],
+      [
+        "dlwengu",
+        "la"
+      ],
+      [
+        "We",
+        "st"
+      ],
+      [
+        "hlan",
+        "hla"
+      ],
+      [
+        "pheshe",
+        "ya"
+      ],
+      [
+        "abesi",
+        "fazane"
+      ],
+      [
+        "hlin",
+        "zeka"
+      ],
+      [
+        "ili",
+        "tha"
+      ],
+      [
+        "komi",
+        "ti"
+      ],
+      [
+        "phakami",
+        "so"
+      ],
+      [
+        "Fan",
+        "nie"
+      ],
+      [
+        "kila",
+        "sini"
+      ],
+      [
+        "daka",
+        "mizwa"
+      ],
+      [
+        "SAP",
+        "S"
+      ],
+      [
+        "Edu",
+        "cation"
+      ],
+      [
+        "Gwar",
+        "ube"
+      ],
+      [
+        "Hap",
+        "py"
+      ],
+      [
+        "rhu",
+        "leni"
+      ],
+      [
+        "phara",
+        "fini"
+      ],
+      [
+        "kwente",
+        "ngo"
+      ],
+      [
+        "riga",
+        "dier"
+      ],
+      [
+        "uThula",
+        "ni"
+      ],
+      [
+        "Insta",
+        "gram"
+      ],
+      [
+        ")",
+        "."
+      ],
+      [
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "6"
+      ],
+      [
+        "1",
+        "8"
+      ],
+      [
+        "1",
+        "00"
+      ],
+      [
+        "7",
+        "8"
+      ],
+      [
+        "A",
+        "ward"
+      ],
+      [
+        "B",
+        "aba"
+      ],
+      [
+        "B",
+        "he"
+      ],
+      [
+        "C",
+        "ya"
+      ],
+      [
+        "C",
+        "ent"
+      ],
+      [
+        "C",
+        "UL"
+      ],
+      [
+        "D",
+        "i"
+      ],
+      [
+        "F",
+        "o"
+      ],
+      [
+        "G",
+        "eneral"
+      ],
+      [
+        "H",
+        "AN"
+      ],
+      [
+        "H",
+        "igh"
+      ],
+      [
+        "I",
+        "E"
+      ],
+      [
+        "I",
+        "M"
+      ],
+      [
+        "K",
+        "E"
+      ],
+      [
+        "K",
+        "M"
+      ],
+      [
+        "K",
+        "le"
+      ],
+      [
+        "M",
+        "p"
+      ],
+      [
+        "M",
+        "elika"
+      ],
+      [
+        "N",
+        "ta"
+      ],
+      [
+        "N",
+        "dunankulu"
+      ],
+      [
+        "N",
+        "dlunkulu"
+      ],
+      [
+        "N",
+        "je"
+      ],
+      [
+        "O",
+        "B"
+      ],
+      [
+        "O",
+        "S"
+      ],
+      [
+        "P",
+        "H"
+      ],
+      [
+        "P",
+        "retoria"
+      ],
+      [
+        "R",
+        "7"
+      ],
+      [
+        "R",
+        "e"
+      ],
+      [
+        "S",
+        "u"
+      ],
+      [
+        "S",
+        "haba"
+      ],
+      [
+        "T",
+        "h"
+      ],
+      [
+        "U",
+        "bu"
+      ],
+      [
+        "U",
+        "hulumeni"
+      ],
+      [
+        "U",
+        "Ramaphosa"
+      ],
+      [
+        "V",
+        "ele"
+      ],
+      [
+        "W",
+        "A"
+      ],
+      [
+        "a",
+        "ke"
+      ],
+      [
+        "a",
+        "yo"
+      ],
+      [
+        "a",
+        "ngama"
+      ],
+      [
+        "a",
+        "benza"
+      ],
+      [
+        "b",
+        "ri"
+      ],
+      [
+        "c",
+        "abanga"
+      ],
+      [
+        "c",
+        "tion"
+      ],
+      [
+        "d",
+        "ume"
+      ],
+      [
+        "e",
+        "pha"
+      ],
+      [
+        "e",
+        "fu"
+      ],
+      [
+        "e",
+        "di"
+      ],
+      [
+        "e",
+        "phakathi"
+      ],
+      [
+        "i",
+        "ba"
+      ],
+      [
+        "i",
+        "ne"
+      ],
+      [
+        "i",
+        "su"
+      ],
+      [
+        "i",
+        "zwe"
+      ],
+      [
+        "i",
+        "funa"
+      ],
+      [
+        "i",
+        "MKP"
+      ],
+      [
+        "i",
+        "Ngonyama"
+      ],
+      [
+        "i",
+        "Mbube"
+      ],
+      [
+        "i",
+        "qiniso"
+      ],
+      [
+        "k",
+        "lo"
+      ],
+      [
+        "l",
+        "worth"
+      ],
+      [
+        "m",
+        "enyeze"
+      ],
+      [
+        "n",
+        "weni"
+      ],
+      [
+        "n",
+        "suku"
+      ],
+      [
+        "n",
+        "endlela"
+      ],
+      [
+        "o",
+        "no"
+      ],
+      [
+        "o",
+        "kwe"
+      ],
+      [
+        "o",
+        "koku"
+      ],
+      [
+        "q",
+        "h"
+      ],
+      [
+        "s",
+        "ti"
+      ],
+      [
+        "t",
+        "weni"
+      ],
+      [
+        "t",
+        "re"
+      ],
+      [
+        "u",
+        "l"
+      ],
+      [
+        "u",
+        "nda"
+      ],
+      [
+        "u",
+        "kwazi"
+      ],
+      [
+        "u",
+        "nike"
+      ],
+      [
+        "u",
+        "thole"
+      ],
+      [
+        "u",
+        "Ngqongqoshe"
+      ],
+      [
+        "u",
+        "thando"
+      ],
+      [
+        "u",
+        "phawule"
+      ],
+      [
+        "v",
+        "umela"
+      ],
+      [
+        "y",
+        "wa"
+      ],
+      [
+        "y",
+        "we"
+      ],
+      [
+        "y",
+        "ho"
+      ],
+      [
+        "z",
+        "z"
+      ],
+      [
+        "ku",
+        "na"
+      ],
+      [
+        "ku",
+        "de"
+      ],
+      [
+        "ku",
+        "ningi"
+      ],
+      [
+        "ku",
+        "qhubeka"
+      ],
+      [
+        "ku",
+        "labo"
+      ],
+      [
+        "ku",
+        "buye"
+      ],
+      [
+        "ku",
+        "gxi"
+      ],
+      [
+        "ku",
+        "ngenzeka"
+      ],
+      [
+        "ng",
+        "cindezi"
+      ],
+      [
+        "ba",
+        "ni"
+      ],
+      [
+        "ba",
+        "sa"
+      ],
+      [
+        "ba",
+        "yi"
+      ],
+      [
+        "le",
+        "so"
+      ],
+      [
+        "wa",
+        "m"
+      ],
+      [
+        "wa",
+        "be"
+      ],
+      [
+        "wa",
+        "ya"
+      ],
+      [
+        "wa",
+        "ne"
+      ],
+      [
+        "wa",
+        "gcina"
+      ],
+      [
+        "wa",
+        "veza"
+      ],
+      [
+        "wa",
+        "bulawa"
+      ],
+      [
+        "zi",
+        "ya"
+      ],
+      [
+        "zi",
+        "ngaka"
+      ],
+      [
+        "en",
+        "ki"
+      ],
+      [
+        "en",
+        "jini"
+      ],
+      [
+        "si",
+        "gameko"
+      ],
+      [
+        "si",
+        "kole"
+      ],
+      [
+        "ka",
+        "Zulu"
+      ],
+      [
+        "ka",
+        "ngaka"
+      ],
+      [
+        "ka",
+        "Madlanga"
+      ],
+      [
+        "ma",
+        "qembu"
+      ],
+      [
+        "li",
+        "yo"
+      ],
+      [
+        "li",
+        "gh"
+      ],
+      [
+        "lo",
+        "ne"
+      ],
+      [
+        "lo",
+        "dwa"
+      ],
+      [
+        "we",
+        "thu"
+      ],
+      [
+        "ph",
+        "eni"
+      ],
+      [
+        "ph",
+        "umu"
+      ],
+      [
+        "uku",
+        "za"
+      ],
+      [
+        "uku",
+        "khuluma"
+      ],
+      [
+        "uku",
+        "vikela"
+      ],
+      [
+        "uku",
+        "qokwa"
+      ],
+      [
+        "uku",
+        "bhekana"
+      ],
+      [
+        "nd",
+        "wa"
+      ],
+      [
+        "nd",
+        "ela"
+      ],
+      [
+        "se",
+        "Thekwini"
+      ],
+      [
+        "ni",
+        "se"
+      ],
+      [
+        "ni",
+        "ngo"
+      ],
+      [
+        "ni",
+        "swa"
+      ],
+      [
+        "sh",
+        "1"
+      ],
+      [
+        "lu",
+        "zo"
+      ],
+      [
+        "be",
+        "zo"
+      ],
+      [
+        "be",
+        "khona"
+      ],
+      [
+        "be",
+        "qembu"
+      ],
+      [
+        "oku",
+        "lindeleke"
+      ],
+      [
+        "ya",
+        "thi"
+      ],
+      [
+        "aba",
+        "ne"
+      ],
+      [
+        "aba",
+        "holi"
+      ],
+      [
+        "aba",
+        "yisi"
+      ],
+      [
+        "aba",
+        "shayeli"
+      ],
+      [
+        "nt",
+        "so"
+      ],
+      [
+        "yi",
+        "cala"
+      ],
+      [
+        "ye",
+        "Phasika"
+      ],
+      [
+        "bu",
+        "yise"
+      ],
+      [
+        "ke",
+        "lwa"
+      ],
+      [
+        "zo",
+        "M"
+      ],
+      [
+        "zo",
+        "lo"
+      ],
+      [
+        "ngo",
+        "suku"
+      ],
+      [
+        "ngo",
+        "Mashi"
+      ],
+      [
+        "za",
+        "me"
+      ],
+      [
+        "the",
+        "le"
+      ],
+      [
+        "um",
+        "sindo"
+      ],
+      [
+        "um",
+        "khankaso"
+      ],
+      [
+        "bo",
+        "ba"
+      ],
+      [
+        "bo",
+        "shiwe"
+      ],
+      [
+        "ze",
+        "li"
+      ],
+      [
+        "ko",
+        "hla"
+      ],
+      [
+        "nge",
+        "mali"
+      ],
+      [
+        "nge",
+        "minyaka"
+      ],
+      [
+        "nge",
+        "mpilo"
+      ],
+      [
+        "kho",
+        "lo"
+      ],
+      [
+        "khu",
+        "ba"
+      ],
+      [
+        "khu",
+        "le"
+      ],
+      [
+        "khu",
+        "za"
+      ],
+      [
+        "khu",
+        "ngweni"
+      ],
+      [
+        "kwa",
+        "se"
+      ],
+      [
+        "kwa",
+        "wo"
+      ],
+      [
+        "kwa",
+        "lesi"
+      ],
+      [
+        "kwa",
+        "lokho"
+      ],
+      [
+        "kwa",
+        "mukela"
+      ],
+      [
+        "so",
+        "bu"
+      ],
+      [
+        "so",
+        "ndo"
+      ],
+      [
+        "ha",
+        "mbi"
+      ],
+      [
+        "izi",
+        "ndawo"
+      ],
+      [
+        "izi",
+        "kibha"
+      ],
+      [
+        "izi",
+        "nyathelo"
+      ],
+      [
+        "kha",
+        "si"
+      ],
+      [
+        "kha",
+        "kha"
+      ],
+      [
+        "ezi",
+        "zo"
+      ],
+      [
+        "ezi",
+        "yisi"
+      ],
+      [
+        "ama",
+        "bolo"
+      ],
+      [
+        "em",
+        "e"
+      ],
+      [
+        "em",
+        "bi"
+      ],
+      [
+        "em",
+        "hlanga"
+      ],
+      [
+        "em",
+        "sakazweni"
+      ],
+      [
+        "ngi",
+        "si"
+      ],
+      [
+        "ngi",
+        "ya"
+      ],
+      [
+        "ngi",
+        "zo"
+      ],
+      [
+        "nje",
+        "ngo"
+      ],
+      [
+        "tho",
+        "lwa"
+      ],
+      [
+        "tho",
+        "mbe"
+      ],
+      [
+        "kwe",
+        "se"
+      ],
+      [
+        "kwe",
+        "minyaka"
+      ],
+      [
+        "ki",
+        "si"
+      ],
+      [
+        "ki",
+        "we"
+      ],
+      [
+        "ngu",
+        "M"
+      ],
+      [
+        "Ma",
+        "nje"
+      ],
+      [
+        "Ma",
+        "jozi"
+      ],
+      [
+        "ci",
+        "al"
+      ],
+      [
+        "isi",
+        "tatimende"
+      ],
+      [
+        "ben",
+        "ze"
+      ],
+      [
+        "thu",
+        "lo"
+      ],
+      [
+        "thu",
+        "nzi"
+      ],
+      [
+        "wo",
+        "m"
+      ],
+      [
+        "wo",
+        "kholo"
+      ],
+      [
+        "end",
+        "lini"
+      ],
+      [
+        "ngoku",
+        "ba"
+      ],
+      [
+        "uM",
+        "khwanazi"
+      ],
+      [
+        "uM",
+        "phathiswa"
+      ],
+      [
+        "mba",
+        "ngo"
+      ],
+      [
+        "mo",
+        "nd"
+      ],
+      [
+        "to",
+        "uch"
+      ],
+      [
+        "uma",
+        "sipala"
+      ],
+      [
+        "ndi",
+        "le"
+      ],
+      [
+        "ngen",
+        "za"
+      ],
+      [
+        "Si",
+        "mela"
+      ],
+      [
+        "va",
+        "lwa"
+      ],
+      [
+        "phi",
+        "we"
+      ],
+      [
+        "Ku",
+        "ya"
+      ],
+      [
+        "Ku",
+        "bikwa"
+      ],
+      [
+        "Ku",
+        "rhuleni"
+      ],
+      [
+        "kwen",
+        "zile"
+      ],
+      [
+        "su",
+        "sa"
+      ],
+      [
+        "ca",
+        "ca"
+      ],
+      [
+        "ta",
+        "in"
+      ],
+      [
+        "ti",
+        "le"
+      ],
+      [
+        "zoku",
+        "shaja"
+      ],
+      [
+        "imi",
+        "cimbi"
+      ],
+      [
+        "imi",
+        "buzo"
+      ],
+      [
+        "yoku",
+        "gi"
+      ],
+      [
+        "yoku",
+        "khetha"
+      ],
+      [
+        "da",
+        "de"
+      ],
+      [
+        "in",
+        "fo"
+      ],
+      [
+        "ra",
+        "n"
+      ],
+      [
+        "qa",
+        "lile"
+      ],
+      [
+        "ene",
+        "minyaka"
+      ],
+      [
+        "UM",
+        "khwanazi"
+      ],
+      [
+        "gci",
+        "ni"
+      ],
+      [
+        "gci",
+        "ze"
+      ],
+      [
+        "loku",
+        "bulala"
+      ],
+      [
+        "hi",
+        "ngo"
+      ],
+      [
+        "Na",
+        "nda"
+      ],
+      [
+        "st",
+        "y"
+      ],
+      [
+        "vi",
+        "shini"
+      ],
+      [
+        "zwa",
+        "ka"
+      ],
+      [
+        "land",
+        "ele"
+      ],
+      [
+        "ema",
+        "il"
+      ],
+      [
+        "ema",
+        "phoyiseni"
+      ],
+      [
+        "ema",
+        "kilasini"
+      ],
+      [
+        "phu",
+        "tha"
+      ],
+      [
+        "mbe",
+        "la"
+      ],
+      [
+        "gu",
+        "la"
+      ],
+      [
+        "cwa",
+        "ningo"
+      ],
+      [
+        "nyu",
+        "sa"
+      ],
+      [
+        "thola",
+        "kale"
+      ],
+      [
+        "gi",
+        "beli"
+      ],
+      [
+        "umu",
+        "zi"
+      ],
+      [
+        "Aba",
+        "solwa"
+      ],
+      [
+        "zin",
+        "solo"
+      ],
+      [
+        "olu",
+        "zayo"
+      ],
+      [
+        "ndele",
+        "ne"
+      ],
+      [
+        "Le",
+        "wi"
+      ],
+      [
+        "woku",
+        "bambisana"
+      ],
+      [
+        "La",
+        "bo"
+      ],
+      [
+        "re",
+        "e"
+      ],
+      [
+        "kwezi",
+        "nye"
+      ],
+      [
+        "wase",
+        "Kurhuleni"
+      ],
+      [
+        "ngezi",
+        "ndlela"
+      ],
+      [
+        "obe",
+        "ku"
+      ],
+      [
+        "qe",
+        "de"
+      ],
+      [
+        "qe",
+        "da"
+      ],
+      [
+        "ch",
+        "mond"
+      ],
+      [
+        "wen",
+        "a"
+      ],
+      [
+        "thisha",
+        "nhloko"
+      ],
+      [
+        "hli",
+        "ziyo"
+      ],
+      [
+        "usho",
+        "nele"
+      ],
+      [
+        "IN",
+        "DE"
+      ],
+      [
+        "ebe",
+        "si"
+      ],
+      [
+        "kunga",
+        "bi"
+      ],
+      [
+        "lungi",
+        "sa"
+      ],
+      [
+        "bala",
+        "le"
+      ],
+      [
+        "nemi",
+        "nye"
+      ],
+      [
+        "LE",
+        "D"
+      ],
+      [
+        "nen",
+        "kinga"
+      ],
+      [
+        "Kho",
+        "zi"
+      ],
+      [
+        "siza",
+        "kala"
+      ],
+      [
+        "hambe",
+        "le"
+      ],
+      [
+        "Mi",
+        "na"
+      ],
+      [
+        "Mi",
+        "ss"
+      ],
+      [
+        "hloni",
+        "shwe"
+      ],
+      [
+        "Nga",
+        "kho"
+      ],
+      [
+        "Me",
+        "tro"
+      ],
+      [
+        "Me",
+        "yiwa"
+      ],
+      [
+        "weze",
+        "Mfundo"
+      ],
+      [
+        "Sa",
+        "dtu"
+      ],
+      [
+        "UL",
+        "U"
+      ],
+      [
+        "nci",
+        "phisa"
+      ],
+      [
+        "xha",
+        "so"
+      ],
+      [
+        "kwenze",
+        "ke"
+      ],
+      [
+        "Co",
+        "lone"
+      ],
+      [
+        "uD",
+        "uma"
+      ],
+      [
+        "ngase",
+        "kho"
+      ],
+      [
+        "HA",
+        "LA"
+      ],
+      [
+        "Ho",
+        "lworth"
+      ],
+      [
+        "besi",
+        "lisa"
+      ],
+      [
+        "yale",
+        "lo"
+      ],
+      [
+        "khokh",
+        "ele"
+      ],
+      [
+        "shiya",
+        "ga"
+      ],
+      [
+        "boni",
+        "le"
+      ],
+      [
+        "Lu",
+        "ndi"
+      ],
+      [
+        "oso",
+        "mabhizinisi"
+      ],
+      [
+        "khum",
+        "bula"
+      ],
+      [
+        "Africa",
+        "n"
+      ],
+      [
+        "dubula",
+        "na"
+      ],
+      [
+        "dutshu",
+        "lwe"
+      ],
+      [
+        "Tha",
+        "to"
+      ],
+      [
+        "Hi",
+        "ll"
+      ],
+      [
+        "okwa",
+        "manje"
+      ],
+      [
+        "uS",
+        "duduzo"
+      ],
+      [
+        "sungu",
+        "li"
+      ],
+      [
+        "phumele",
+        "le"
+      ],
+      [
+        "Cy",
+        "ril"
+      ],
+      [
+        "zase",
+        "Kha"
+      ],
+      [
+        "lwama",
+        "cala"
+      ],
+      [
+        "dede",
+        "lwa"
+      ],
+      [
+        "nkosi",
+        "ni"
+      ],
+      [
+        "Kuzo",
+        "khumbu"
+      ],
+      [
+        "bheki",
+        "se"
+      ],
+      [
+        "ded",
+        "ela"
+      ],
+      [
+        "nqa",
+        "mu"
+      ],
+      [
+        "sem",
+        "thethweni"
+      ],
+      [
+        "Par",
+        "k"
+      ],
+      [
+        "ePi",
+        "toli"
+      ],
+      [
+        "Cap",
+        "e"
+      ],
+      [
+        "Ri",
+        "chmond"
+      ],
+      [
+        "gqa",
+        "misa"
+      ],
+      [
+        "tshi",
+        "unda"
+      ],
+      [
+        "hluku",
+        "me"
+      ],
+      [
+        "kubhe",
+        "kwe"
+      ],
+      [
+        "kaZwe",
+        "lithini"
+      ],
+      [
+        "koM",
+        "phakathi"
+      ],
+      [
+        "dili",
+        "za"
+      ],
+      [
+        "Nt",
+        "wana"
+      ],
+      [
+        "Te",
+        "am"
+      ],
+      [
+        "hy",
+        "bri"
+      ],
+      [
+        "emgwa",
+        "qweni"
+      ],
+      [
+        "vaka",
+        "sh"
+      ],
+      [
+        "finye",
+        "lele"
+      ],
+      [
+        "ekufundi",
+        "seni"
+      ],
+      [
+        "vide",
+        "o"
+      ],
+      [
+        "esezi",
+        "ngeni"
+      ],
+      [
+        "Award",
+        "s"
+      ],
+      [
+        "Cya",
+        "n"
+      ],
+      [
+        "Kle",
+        "be"
+      ],
+      [
+        "OS",
+        "HE"
+      ],
+      [
+        "Vele",
+        "nkosini"
+      ],
+      [
+        "kugxi",
+        "lwe"
+      ],
+      [
+        "ligh",
+        "ts"
+      ],
+      [
+        "kohla",
+        "kalo"
+      ],
+      [
+        "emhlanga",
+        "nweni"
+      ],
+      [
+        "touch",
+        "screen"
+      ],
+      [
+        "Simela",
+        "ne"
+      ],
+      [
+        "tain",
+        "ment"
+      ],
+      [
+        "yokugi",
+        "bela"
+      ],
+      [
+        "info",
+        "tainment"
+      ],
+      [
+        "Lewi",
+        "s"
+      ],
+      [
+        "Colone",
+        "l"
+      ],
+      [
+        "Holworth",
+        "y"
+      ],
+      [
+        "zaseKha",
+        "ya"
+      ],
+      [
+        "Kuzokhumbu",
+        "leka"
+      ],
+      [
+        "hybri",
+        "d"
+      ],
+      [
+        "\"",
+        "."
+      ],
+      [
+        "2",
+        "8"
+      ],
+      [
+        "3",
+        "5"
+      ],
+      [
+        "3",
+        "6"
+      ],
+      [
+        "9",
+        "0"
+      ],
+      [
+        "9",
+        "3"
+      ],
+      [
+        ":",
+        "\""
+      ],
+      [
+        "A",
+        "C"
+      ],
+      [
+        "A",
+        "nd"
+      ],
+      [
+        "B",
+        "ig"
+      ],
+      [
+        "C",
+        "e"
+      ],
+      [
+        "C",
+        "ho"
+      ],
+      [
+        "C",
+        "hi"
+      ],
+      [
+        "D",
+        "lu"
+      ],
+      [
+        "D",
+        "LA"
+      ],
+      [
+        "D",
+        "ise"
+      ],
+      [
+        "E",
+        "T"
+      ],
+      [
+        "E",
+        "ku"
+      ],
+      [
+        "E",
+        "mp"
+      ],
+      [
+        "F",
+        "a"
+      ],
+      [
+        "I",
+        "C"
+      ],
+      [
+        "I",
+        "Z"
+      ],
+      [
+        "I",
+        "ya"
+      ],
+      [
+        "I",
+        "the"
+      ],
+      [
+        "L",
+        "AN"
+      ],
+      [
+        "M",
+        "A"
+      ],
+      [
+        "M",
+        "AN"
+      ],
+      [
+        "M",
+        "balula"
+      ],
+      [
+        "N",
+        "to"
+      ],
+      [
+        "N",
+        "da"
+      ],
+      [
+        "N",
+        "hlanhla"
+      ],
+      [
+        "O",
+        "R"
+      ],
+      [
+        "O",
+        "kwa"
+      ],
+      [
+        "P",
+        "la"
+      ],
+      [
+        "P",
+        "ri"
+      ],
+      [
+        "R",
+        "S"
+      ],
+      [
+        "R",
+        "us"
+      ],
+      [
+        "S",
+        "te"
+      ],
+      [
+        "S",
+        "eku"
+      ],
+      [
+        "S",
+        "pe"
+      ],
+      [
+        "U",
+        "Z"
+      ],
+      [
+        "U",
+        "kuba"
+      ],
+      [
+        "U",
+        "Xaba"
+      ],
+      [
+        "Y",
+        "A"
+      ],
+      [
+        "Y",
+        "E"
+      ],
+      [
+        "a",
+        "d"
+      ],
+      [
+        "a",
+        "r"
+      ],
+      [
+        "a",
+        "lo"
+      ],
+      [
+        "a",
+        "lu"
+      ],
+      [
+        "a",
+        "ya"
+      ],
+      [
+        "a",
+        "vu"
+      ],
+      [
+        "a",
+        "ngene"
+      ],
+      [
+        "a",
+        "qhubeke"
+      ],
+      [
+        "a",
+        "sebenze"
+      ],
+      [
+        "a",
+        "giso"
+      ],
+      [
+        "c",
+        "t"
+      ],
+      [
+        "e",
+        "q"
+      ],
+      [
+        "e",
+        "thu"
+      ],
+      [
+        "e",
+        "phe"
+      ],
+      [
+        "e",
+        "qembu"
+      ],
+      [
+        "e",
+        "sen"
+      ],
+      [
+        "e",
+        "bhekene"
+      ],
+      [
+        "e",
+        "duze"
+      ],
+      [
+        "e",
+        "ut"
+      ],
+      [
+        "e",
+        "Sho"
+      ],
+      [
+        "e",
+        "Gauteng"
+      ],
+      [
+        "f",
+        "estival"
+      ],
+      [
+        "g",
+        "qo"
+      ],
+      [
+        "g",
+        "qoka"
+      ],
+      [
+        "i",
+        "D"
+      ],
+      [
+        "i",
+        "M"
+      ],
+      [
+        "i",
+        "la"
+      ],
+      [
+        "i",
+        "na"
+      ],
+      [
+        "i",
+        "yo"
+      ],
+      [
+        "i",
+        "hla"
+      ],
+      [
+        "i",
+        "khona"
+      ],
+      [
+        "i",
+        "ndi"
+      ],
+      [
+        "i",
+        "suka"
+      ],
+      [
+        "i",
+        "yona"
+      ],
+      [
+        "i",
+        "Mo"
+      ],
+      [
+        "i",
+        "fika"
+      ],
+      [
+        "i",
+        "buya"
+      ],
+      [
+        "i",
+        "Ca"
+      ],
+      [
+        "i",
+        "thenda"
+      ],
+      [
+        "i",
+        "zakhamuzi"
+      ],
+      [
+        "j",
+        "uba"
+      ],
+      [
+        "l",
+        "d"
+      ],
+      [
+        "l",
+        "la"
+      ],
+      [
+        "l",
+        "wini"
+      ],
+      [
+        "m",
+        "nike"
+      ],
+      [
+        "m",
+        "nandi"
+      ],
+      [
+        "m",
+        "jovo"
+      ],
+      [
+        "m",
+        "sakazo"
+      ],
+      [
+        "m",
+        "endeni"
+      ],
+      [
+        "n",
+        "thi"
+      ],
+      [
+        "n",
+        "co"
+      ],
+      [
+        "n",
+        "hlobo"
+      ],
+      [
+        "n",
+        "endoda"
+      ],
+      [
+        "o",
+        "thi"
+      ],
+      [
+        "o",
+        "zayo"
+      ],
+      [
+        "o",
+        "dlule"
+      ],
+      [
+        "o",
+        "bala"
+      ],
+      [
+        "o",
+        "yedwa"
+      ],
+      [
+        "o",
+        "ngasekho"
+      ],
+      [
+        "p",
+        "ro"
+      ],
+      [
+        "p",
+        "as"
+      ],
+      [
+        "q",
+        "waba"
+      ],
+      [
+        "q",
+        "wini"
+      ],
+      [
+        "r",
+        "g"
+      ],
+      [
+        "r",
+        "ro"
+      ],
+      [
+        "s",
+        "y"
+      ],
+      [
+        "t",
+        "ela"
+      ],
+      [
+        "u",
+        "b"
+      ],
+      [
+        "u",
+        "g"
+      ],
+      [
+        "u",
+        "li"
+      ],
+      [
+        "u",
+        "nyaka"
+      ],
+      [
+        "u",
+        "hlu"
+      ],
+      [
+        "u",
+        "sizo"
+      ],
+      [
+        "u",
+        "Li"
+      ],
+      [
+        "u",
+        "qale"
+      ],
+      [
+        "u",
+        "Zo"
+      ],
+      [
+        "u",
+        "tshele"
+      ],
+      [
+        "u",
+        "Colonel"
+      ],
+      [
+        "v",
+        "eni"
+      ],
+      [
+        "v",
+        "umele"
+      ],
+      [
+        "v",
+        "emba"
+      ],
+      [
+        "x",
+        "h"
+      ],
+      [
+        "x",
+        "usa"
+      ],
+      [
+        "y",
+        "k"
+      ],
+      [
+        "z",
+        "uku"
+      ],
+      [
+        "z",
+        "abantu"
+      ],
+      [
+        "ku",
+        "la"
+      ],
+      [
+        "ku",
+        "ma"
+      ],
+      [
+        "ku",
+        "yi"
+      ],
+      [
+        "ku",
+        "kho"
+      ],
+      [
+        "ku",
+        "phi"
+      ],
+      [
+        "ku",
+        "ve"
+      ],
+      [
+        "ku",
+        "nzi"
+      ],
+      [
+        "ku",
+        "bona"
+      ],
+      [
+        "ku",
+        "ndleni"
+      ],
+      [
+        "ku",
+        "lolu"
+      ],
+      [
+        "ku",
+        "fika"
+      ],
+      [
+        "ku",
+        "khombisa"
+      ],
+      [
+        "ku",
+        "dala"
+      ],
+      [
+        "ku",
+        "Mzansi"
+      ],
+      [
+        "ku",
+        "hlon"
+      ],
+      [
+        "ng",
+        "co"
+      ],
+      [
+        "ng",
+        "xo"
+      ],
+      [
+        "th",
+        "umela"
+      ],
+      [
+        "la",
+        "kho"
+      ],
+      [
+        "la",
+        "yo"
+      ],
+      [
+        "la",
+        "kuleli"
+      ],
+      [
+        "ba",
+        "m"
+      ],
+      [
+        "ba",
+        "yo"
+      ],
+      [
+        "ba",
+        "nzi"
+      ],
+      [
+        "ba",
+        "bona"
+      ],
+      [
+        "ba",
+        "phinde"
+      ],
+      [
+        "ba",
+        "veze"
+      ],
+      [
+        "ba",
+        "vele"
+      ],
+      [
+        "ba",
+        "thole"
+      ],
+      [
+        "ba",
+        "qhubeke"
+      ],
+      [
+        "le",
+        "na"
+      ],
+      [
+        "le",
+        "the"
+      ],
+      [
+        "le",
+        "thu"
+      ],
+      [
+        "wa",
+        "kwa"
+      ],
+      [
+        "zi",
+        "ba"
+      ],
+      [
+        "zi",
+        "ngu"
+      ],
+      [
+        "en",
+        "kundleni"
+      ],
+      [
+        "si",
+        "a"
+      ],
+      [
+        "si",
+        "la"
+      ],
+      [
+        "si",
+        "the"
+      ],
+      [
+        "si",
+        "mo"
+      ],
+      [
+        "si",
+        "khathi"
+      ],
+      [
+        "si",
+        "balo"
+      ],
+      [
+        "ka",
+        "M"
+      ],
+      [
+        "ka",
+        "nga"
+      ],
+      [
+        "ka",
+        "dizili"
+      ],
+      [
+        "ka",
+        "mufi"
+      ],
+      [
+        "ma",
+        "ne"
+      ],
+      [
+        "ma",
+        "ndla"
+      ],
+      [
+        "ma",
+        "khelwane"
+      ],
+      [
+        "ma",
+        "tic"
+      ],
+      [
+        "thi",
+        "le"
+      ],
+      [
+        "li",
+        "nga"
+      ],
+      [
+        "li",
+        "ya"
+      ],
+      [
+        "li",
+        "swa"
+      ],
+      [
+        "li",
+        "nde"
+      ],
+      [
+        "li",
+        "tre"
+      ],
+      [
+        "na",
+        "mu"
+      ],
+      [
+        "na",
+        "mhlanje"
+      ],
+      [
+        "we",
+        "Mfundo"
+      ],
+      [
+        "we",
+        "zaseKhaya"
+      ],
+      [
+        "uku",
+        "khu"
+      ],
+      [
+        "uku",
+        "mela"
+      ],
+      [
+        "uku",
+        "qhubeka"
+      ],
+      [
+        "uku",
+        "buya"
+      ],
+      [
+        "uku",
+        "tholakala"
+      ],
+      [
+        "nd",
+        "u"
+      ],
+      [
+        "nd",
+        "we"
+      ],
+      [
+        "nd",
+        "weni"
+      ],
+      [
+        "se",
+        "lwe"
+      ],
+      [
+        "se",
+        "Nkantolo"
+      ],
+      [
+        "nga",
+        "ba"
+      ],
+      [
+        "nga",
+        "mele"
+      ],
+      [
+        "nga",
+        "lolu"
+      ],
+      [
+        "nga",
+        "phezu"
+      ],
+      [
+        "sh",
+        "isi"
+      ],
+      [
+        "lu",
+        "nye"
+      ],
+      [
+        "be",
+        "ke"
+      ],
+      [
+        "be",
+        "wu"
+      ],
+      [
+        "be",
+        "khala"
+      ],
+      [
+        "oku",
+        "dlwengula"
+      ],
+      [
+        "ya",
+        "lo"
+      ],
+      [
+        "ya",
+        "zo"
+      ],
+      [
+        "sa",
+        "zi"
+      ],
+      [
+        "sa",
+        "yi"
+      ],
+      [
+        "sa",
+        "nda"
+      ],
+      [
+        "aba",
+        "si"
+      ],
+      [
+        "aba",
+        "ngu"
+      ],
+      [
+        "aba",
+        "nama"
+      ],
+      [
+        "aba",
+        "hlukene"
+      ],
+      [
+        "aba",
+        "Ntwana"
+      ],
+      [
+        "ne",
+        "thi"
+      ],
+      [
+        "ne",
+        "cala"
+      ],
+      [
+        "nt",
+        "sha"
+      ],
+      [
+        "yi",
+        "ngakho"
+      ],
+      [
+        "ye",
+        "minyaka"
+      ],
+      [
+        "bu",
+        "kho"
+      ],
+      [
+        "bu",
+        "gebengu"
+      ],
+      [
+        "ke",
+        "ka"
+      ],
+      [
+        "ke",
+        "lo"
+      ],
+      [
+        "ke",
+        "the"
+      ],
+      [
+        "ngo",
+        "kwenza"
+      ],
+      [
+        "ngo",
+        "daba"
+      ],
+      [
+        "ngo",
+        "Fe"
+      ],
+      [
+        "za",
+        "li"
+      ],
+      [
+        "za",
+        "mo"
+      ],
+      [
+        "the",
+        "mbi"
+      ],
+      [
+        "um",
+        "fundi"
+      ],
+      [
+        "um",
+        "holi"
+      ],
+      [
+        "um",
+        "isa"
+      ],
+      [
+        "um",
+        "hlaba"
+      ],
+      [
+        "um",
+        "yeni"
+      ],
+      [
+        "um",
+        "yalezo"
+      ],
+      [
+        "um",
+        "fowabo"
+      ],
+      [
+        "bo",
+        "nge"
+      ],
+      [
+        "ze",
+        "zinto"
+      ],
+      [
+        "ko",
+        "na"
+      ],
+      [
+        "mi",
+        "na"
+      ],
+      [
+        "mi",
+        "siwe"
+      ],
+      [
+        "nge",
+        "lwe"
+      ],
+      [
+        "nge",
+        "sonto"
+      ],
+      [
+        "bi",
+        "le"
+      ],
+      [
+        "bi",
+        "ka"
+      ],
+      [
+        "kho",
+        "tha"
+      ],
+      [
+        "lwa",
+        "nga"
+      ],
+      [
+        "lwa",
+        "yo"
+      ],
+      [
+        "nj",
+        "i"
+      ],
+      [
+        "pha",
+        "m"
+      ],
+      [
+        "kwa",
+        "thiwa"
+      ],
+      [
+        "so",
+        "li"
+      ],
+      [
+        "fu",
+        "ne"
+      ],
+      [
+        "fu",
+        "ndeni"
+      ],
+      [
+        "izi",
+        "ngoma"
+      ],
+      [
+        "izi",
+        "ndleko"
+      ],
+      [
+        "izi",
+        "mpahla"
+      ],
+      [
+        "izi",
+        "khotha"
+      ],
+      [
+        "kha",
+        "nda"
+      ],
+      [
+        "kha",
+        "wu"
+      ],
+      [
+        "kha",
+        "ndlu"
+      ],
+      [
+        "no",
+        "kho"
+      ],
+      [
+        "no",
+        "Lamiez"
+      ],
+      [
+        "no",
+        "Nksz"
+      ],
+      [
+        "no",
+        "zakwabo"
+      ],
+      [
+        "ezi",
+        "ne"
+      ],
+      [
+        "ezi",
+        "ngeni"
+      ],
+      [
+        "ezi",
+        "ngekho"
+      ],
+      [
+        "ama",
+        "nye"
+      ],
+      [
+        "ama",
+        "khamera"
+      ],
+      [
+        "ama",
+        "thikithi"
+      ],
+      [
+        "em",
+        "cu"
+      ],
+      [
+        "em",
+        "pi"
+      ],
+      [
+        "em",
+        "thethweni"
+      ],
+      [
+        "ngi",
+        "thi"
+      ],
+      [
+        "ngi",
+        "nga"
+      ],
+      [
+        "ela",
+        "kuleli"
       ]
     ]
   }
