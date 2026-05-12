@@ -126,13 +126,16 @@ def analyse_lengths(train_seqs: list, percentile: int = PERCENTILE) -> int:
     return max_len
 
 
-def pad_and_truncate(sequences: list, max_len: int) -> np.ndarray:
+def pad_and_truncate(sequences: list, max_len: int, pad_id: int = 1) -> np.ndarray:
     """
-    Manual post-padding to avoid TensorFlow import just for padding.
-    Equivalent to tf.keras.preprocessing.sequence.pad_sequences
-    with padding='post', truncating='post', value=0.
+    Post-pad and truncate sequences to a fixed length.
+
+    Padding fills empty positions with pad_id (default=1, the [PAD] token),
+    NOT with zero. Zero is reserved for [UNK] (unknown token), which has a
+    different meaning. Padding positions must use [PAD] so the CNN-LSTM's
+    Masking layer can correctly identify and ignore them during training.
     """
-    result = np.zeros((len(sequences), max_len), dtype=np.int32)
+    result = np.full((len(sequences), max_len), fill_value=pad_id, dtype=np.int32)
     for i, seq in enumerate(sequences):
         length = min(len(seq), max_len)
         result[i, :length] = seq[:length]
@@ -306,9 +309,10 @@ def run():
     max_len = analyse_lengths(train_seqs)
 
     # --- Padding ---
-    X_train = pad_and_truncate(train_seqs, max_len)
-    X_val   = pad_and_truncate(val_seqs,   max_len)
-    X_test  = pad_and_truncate(test_seqs,  max_len)
+    pad_id  = tokenizer.token_to_id("[PAD]")   # fetches the actual ID (should be 1)
+    X_train = pad_and_truncate(train_seqs, max_len, pad_id)
+    X_val   = pad_and_truncate(val_seqs,   max_len, pad_id)
+    X_test  = pad_and_truncate(test_seqs,  max_len, pad_id)
 
     # --- Labels ---
     le, y_train, y_val, y_test = encode_labels(train_df, val_df, test_df)
