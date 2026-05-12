@@ -1,10 +1,7 @@
 """
-preprocessing.py
-----------------
-Handles stratified splitting of the isiZulu ( isolezwe) authorship dataset.
+src / preprocessing.py
 
-Usage (from project root):
-    python src/preprocessing.py
+Handles stratified splitting of the isiZulu ( isolezwe newsletter) authorship dataset.
 
 Outputs:
     data/splits/train.csv ( 70 % of data)
@@ -16,9 +13,7 @@ Outputs:
 import os
 import json
 import pandas as pd
-#import numpy as np
 from sklearn.model_selection import train_test_split
-#https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html?utm_source=chatgpt.com
 
 # ── Paths Configs ────────────────────────────────────────────────────────────────────
 RAW_CSV    = os.path.join("data", "raw", "isizulu_authors_dataset_cleaned.csv")
@@ -52,11 +47,8 @@ def stratified_split(df: pd.DataFrame,
         2. Split temp → val (15 %) + test (15 %)
 
     Stratification is on the 'author' column so every author
-    appears in every split at the same relative proportion.
+    appears in EVERY split at the same relative proportion.
     """
-
-    #df = df.groupby("author").filter(lambda x: len(x) >= 5)
-    #print(df["author"].value_counts())
 
     # Stage 1
     temp_frac = test_size + val_size        # 0.30
@@ -64,7 +56,6 @@ def stratified_split(df: pd.DataFrame,
         df,
         test_size=temp_frac,
         random_state=random_state,
-        #Stratification is a technique used to ensure that the distribution of classes (in this case, authors) is preserved in both the training and validation/test sets. By stratifying on the 'author' column, we ensure that each split contains a representative proportion of articles from each author, which is crucial for training a model that can generalize well across all authors.
         stratify=df["author"]
     )
 
@@ -72,7 +63,7 @@ def stratified_split(df: pd.DataFrame,
     val_frac = val_size / temp_frac         # 0.50
     val_df, test_df = train_test_split(
         temp_df,
-        test_size=0.50,
+        test_size=val_frac,
         random_state=random_state,
         stratify=temp_df["author"]
     )
@@ -127,6 +118,8 @@ def verify_split(train_df, val_df, test_df, original_df):
     ids_val   = set(val_df["url"])
     ids_test  = set(test_df["url"])
     overlap = (ids_train & ids_val) | (ids_train & ids_test) | (ids_val & ids_test)
+
+
     if overlap:
         print(f"\n⚠  OVERLAP DETECTED: {len(overlap)} articles appear in multiple splits!")
     else:
