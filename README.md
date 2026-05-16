@@ -14,5 +14,9 @@ isiZulu articles were scraped from Isolezwe (`https://isolezwe.co.za`) for the f
 - Zwelakhe Ngcobo: `https://isolezwe.co.za/authors/mapholoba/` (only has 10 articles)
 - Nokubongwa Phenyane: `https://isolezwe.co.za/authors/maphenyane/`
 
-To run the python script:
+## To run the python script:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install datasets pandas
 ```
