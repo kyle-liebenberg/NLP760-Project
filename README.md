@@ -19,4 +19,5 @@ isiZulu articles were scraped from Isolezwe (`https://isolezwe.co.za`) for the f
 python3 -m venv venv
 source venv/bin/activate
 pip install datasets pandas
+python3 build_author_dataset.py
 ```
