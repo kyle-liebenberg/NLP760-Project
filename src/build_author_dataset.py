@@ -13,7 +13,12 @@ AUTHOR_PROFILES = {
     "Simangaliso Ntshangase": "https://www.isolezwe.co.za/authors/health-and-lifestyle-journalist/",
     "Fanelesibonge Bengu": "https://www.isolezwe.co.za/authors/fanele-bengu/",
     "Nonkululeko Nhlapo": "https://www.isolezwe.co.za/authors/online/",
-    "Nokubongwa Phenyane": "https://www.isolezwe.co.za/authors/maphenyane/"
+    "Nokubongwa Phenyane": "https://www.isolezwe.co.za/authors/maphenyane/",
+    "Zakhele Xaba": "https://isolezwe.co.za/authors/zakhele-xaba/",
+    "Sibusiso Mdlalose": "https://isolezwe.co.za/authors/mdlalose-wezemidlalo/",
+    "Mthokozisi Mncuseni": "https://isolezwe.co.za/authors/your-football-guy/",
+    "Charles Khuzwayo": "https://isolezwe.co.za/authors/entertainment/"
+
     # Dropped Zwelakhe Ngcobo to prevent severe class imbalance
 }
 
@@ -38,7 +43,7 @@ def get_article_links(profile_url):
             # Heuristic to filter out general nav links. 
             # Isolezwe article links usually contain a date (e.g., 2026-04-22)
             # or are generally long strings ending in a word.
-            if '/izindaba/' in href or '/ezemidlalo/' in href or '/ezokungcebeleka/' in href:
+            if ('/izindaba/' in href or '/ezemidlalo/' in href or '/ezokungcebeleka/' in href) and re.search(r'\d{4}-\d{2}-\d{2}', href):
                 # Make sure it's a full URL
                 if href.startswith('/'):
                     href = "https://www.isolezwe.co.za" + href
@@ -110,11 +115,11 @@ def main():
 
     # 4. Save everything to a CSV
     if dataset:
-        print("\nSaving dataset to data/isizulu_authors_dataset.csv...")
+        print("\nSaving dataset to data/raw/isizulu_authors_dataset.csv...")
         df = pd.DataFrame(dataset)
         
         # Ensure data folder exists!
-        df.to_csv('data/isizulu_authors_dataset.csv', index=False, encoding='utf-8')
+        df.to_csv('data/raw/isizulu_authors_dataset.csv', index=False, encoding='utf-8')
         
         print("\n--- Summary ---")
         print(df['author'].value_counts())
