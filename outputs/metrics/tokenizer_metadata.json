@@ -1,28 +1,35 @@
 {
-  "vocab_size": 2000,
+  "vocab_size": 3000,
   "min_frequency": 2,
-  "max_seq_len": 846,
-  "percentile": 90,
-  "actual_vocab": 2000,
-  "num_classes": 6,
+  "max_sequence_length": 840,
+  "percentile": 95,
+  "actual_vocab": 3000,
+  "num_classes": 7,
   "classes": [
     "Fanelesibonge Bengu",
     "Mhlengi Shangase",
     "Nokubongwa Phenyane",
     "Nonkululeko Nhlapo",
     "Sabelo Nsele",
+    "Simangaliso Ntshangase",
     "Zimbili Vilakazi"
   ],
   "X_train_shape": [
-    102,
-    846
+    109,
+    840
   ],
   "X_val_shape": [
-    22,
-    846
+    24,
+    840
   ],
   "X_test_shape": [
-    22,
-    846
-  ]
+    24,
+    840
+  ],
+  "tokenizer_evaluation": {
+    "unk_rate_percent": 0.0057,
+    "fertility": 2.2769,
+    "truncation_rate_percent": 8.2803,
+    "vocab_coverage_percent": 95.8667
+  }
 }

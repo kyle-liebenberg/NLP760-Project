@@ -1,7 +1,7 @@
 """
 src / preprocessing.py
 
-Handles stratified splitting of the isiZulu ( isolezwe newsletter) authorship dataset.
+Handles stratified splitting of the isiZulu (isolezwe newsletter) authorship dataset.
 
 Outputs:
     data/splits/train.csv ( 70 % of data)
@@ -9,25 +9,26 @@ Outputs:
     data/splits/test.csv ( 15 % of data)
 """
 
-#Importing necessary libraries and modules for data manipulation, splitting, and file handling.
+#Importing necessary libraries and modules for data manipulation and splitting.
 import os
 import json
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-# ── Paths Configs ────────────────────────────────────────────────────────────────────
+#Paths Configs 
 RAW_CSV    = os.path.join("data", "raw", "isizulu_authors_dataset_cleaned.csv")
 SPLITS_DIR = os.path.join("data", "splits")
 METRICS_DIR = os.path.join("outputs", "metrics")
 
-#This insures reproducibility of the splits by setting a fixed random state. Adjusting this value will yield different splits, which can be useful for experimentation, but for the final version we want a consistent split to report results on.
+#This insures reproducibility of the splits by setting a fixed random state. Adjusting this value will yield different splits, 
+#which can be useful for experimentation, but for the final version we want a consistent split to report results on.
 RANDOM_STATE = 42
 TEST_SIZE    = 0.15   # 15 % test
 VAL_SIZE     = 0.15   # 15 % val  (taken from the 30 % remainder)
 
 
 def load_data(path: str) -> pd.DataFrame:
-    """Load raw CSV and validate required columns exist."""
+    """Load raw CSV data and validate required columns exist"""
     df = pd.read_csv(path)
     required = {"author", "text"}
     missing  = required - set(df.columns)
@@ -36,15 +37,27 @@ def load_data(path: str) -> pd.DataFrame:
     print(f"[load]  Loaded {len(df)} rows, columns: {df.columns.tolist()}")
     return df
 
-
+#Ensures every author appears in train, val, and test 
+# so that the model sees all writing styles during training.
 def stratified_split(df: pd.DataFrame,
                      test_size: float  = TEST_SIZE,
                      val_size: float   = VAL_SIZE,
                      random_state: int = RANDOM_STATE):
     """
-    Two-stage stratified split:
+    Two-stage stratified split to preserve author distribution across train, val, and test sets:
         1. Split df → train (70 %) + temp (30 %)
         2. Split temp → val (15 %) + test (15 %)
+
+        Inputs:
+            df: DataFrame with 'author' column for stratification
+            test_size: fraction of total data for test set (default 0.15)
+            val_size: fraction of total data for val set (default 0.15)
+            random_state: seed for reproducible splits (default 42)
+        
+        Outputs:
+            train_df: 70 % of data, stratified by author
+            val_df:   15 % of data, stratified by author
+            test_df:  15 % of data, stratified by author
 
     Stratification is on the 'author' column so every author
     appears in EVERY split at the same relative proportion.
@@ -52,7 +65,7 @@ def stratified_split(df: pd.DataFrame,
 
     # Stage 1
     temp_frac = test_size + val_size        # 0.30
-    train_df, temp_df = train_test_split(
+    train_df, holdout_df = train_test_split(
         df,
         test_size=temp_frac,
         random_state=random_state,
@@ -62,17 +75,28 @@ def stratified_split(df: pd.DataFrame,
     # Stage 2 – val is exactly half of temp (15 / 30 = 0.50)
     val_frac = val_size / temp_frac         # 0.50
     val_df, test_df = train_test_split(
-        temp_df,
+        holdout_df,
         test_size=val_frac,
         random_state=random_state,
-        stratify=temp_df["author"]
+        stratify=holdout_df["author"]
     )
+
+    assert len(train_df) + len(val_df) + len(test_df) == len(df), \
+    "Rows were lost during splitting"
+
+
+    assert set(train_df["author"]) == set(df["author"]), \
+    "Some authors are missing from training set"
 
     return train_df, val_df, test_df
 
-
+#Validates the the train/validation/test splits are safe for
+#authorship attribution experiments by checking class coverage and data leakage between splits.
 def verify_split(train_df, val_df, test_df, original_df):
     """
+    Validates that the stratified train/validation/test split is safe
+    for authorship attribution experiments.
+
     Print a verification table and check that:
       - Every author appears in every split.
       - Relative proportions are consistent.
@@ -91,53 +115,67 @@ def verify_split(train_df, val_df, test_df, original_df):
 
     print("\n── Author distribution per split ──")
     #Author distribution check
-    dist = pd.DataFrame({
+    author_distribution_table = pd.DataFrame({
         "Train": train_df["author"].value_counts(),
         "Val":   val_df["author"].value_counts(),
         "Test":  test_df["author"].value_counts(),
     }).fillna(0).astype(int)
-    print(dist.to_string())
+    print(author_distribution_table.to_string())
 
     # Check every author in every split
-    authors_all   = set(original_df["author"].unique())
+    expected_authors   = set(original_df["author"].unique())
     authors_train = set(train_df["author"].unique())
     authors_val   = set(val_df["author"].unique())
     authors_test  = set(test_df["author"].unique())
 
-    missing_val  = authors_all - authors_val
-    missing_test = authors_all - authors_test
+    missing_val  = expected_authors - authors_val
+    missing_test = expected_authors - authors_test
     if missing_val or missing_test:
-        print(f"\n⚠  WARNING: authors missing from val={missing_val}, test={missing_test}")
+        print(f"\n WARNING: authors missing from val={missing_val}, test={missing_test}")
         print("   With only 11 articles for Simangaliso Ntshangase this can happen.")
         print("   If it occurs, try RANDOM_STATE=0 or 1 until all authors appear.")
     else:
-        print("\n✓  All 7 authors present in every split.")
-
+        print("\n  All 7 authors present in every split.")
+    
+    
     # Check no overlap (using URL as a unique key)
-    ids_train = set(train_df["url"])
-    ids_val   = set(val_df["url"])
-    ids_test  = set(test_df["url"])
-    overlap = (ids_train & ids_val) | (ids_train & ids_test) | (ids_val & ids_test)
+    train_urls = set(train_df["url"])
+    val_urls   = set(val_df["url"])
+    test_urls  = set(test_df["url"])
+    overlap = (train_urls & val_urls) | (train_urls & test_urls) | (val_urls & test_urls)
 
 
     if overlap:
-        print(f"\n⚠  OVERLAP DETECTED: {len(overlap)} articles appear in multiple splits!")
+        print(f"\nOVERLAP DETECTED: {len(overlap)} articles appear in multiple splits!")
     else:
-        print("✓  Zero overlap between splits (data leakage check passed).")
+        print("Zero overlap between splits (data leakage check passed).")
 
     print("=" * 60)
+    #No rows lost
+    assert len(train_df) + len(val_df) + len(test_df) == len(original_df), \
+    "Some rows were lost during splitting"
+    #No overlap
+    assert len(overlap) == 0, \
+    "Data leakage detected between splits"
+    #Training must contain all authors
+    assert authors_train == expected_authors, \
+    "Some authors are missing from training set"
 
+## Save fixed dataset partitions to guarantee reproducible
+# experiments across tokenization and model training stages.
 
 def save_splits(train_df, val_df, test_df, splits_dir: str):
     os.makedirs(splits_dir, exist_ok=True)
     train_df.to_csv(os.path.join(splits_dir, "train.csv"), index=False)
     val_df.to_csv(  os.path.join(splits_dir, "val.csv"),   index=False)
     test_df.to_csv( os.path.join(splits_dir, "test.csv"),  index=False)
-    print(f"\n✓  Splits saved to {splits_dir}/")
+    print(f"\n--  Splits saved to {splits_dir}/")
+
+
 
 
 def save_split_metadata(train_df, val_df, test_df, metrics_dir: str):
-    """Save split sizes and author counts to JSON for reproducibility."""
+    """Save split sizes and author counts to JSON for reproducibility """
     os.makedirs(metrics_dir, exist_ok=True)
     meta = {
         "random_state": RANDOM_STATE,
@@ -158,17 +196,6 @@ def save_split_metadata(train_df, val_df, test_df, metrics_dir: str):
 
 def run():
     df = load_data(RAW_CSV)
-
-    #Filtering out authors min samples to be 20 
-    #This is a common preprocessing step to ensure that each class (author) has enough samples for the model to learn from. With only 11 articles for Simangaliso Ntshangase, we might want to set a higher threshold to ensure better model performance, but this will reduce the number of authors in the dataset. Adjusting this threshold will be a trade-off between having more classes and having enough data per class.
-    #But should I remove this filter ? Do we have enough data for all authors ? If we set min_samples to 20, we will lose Simangaliso Ntshangase who has only 11 articles. This will reduce our dataset to 6 authors instead of 7. We need to decide if we want to keep all 7 authors with some having very few samples, or if we want to ensure a minimum number of samples per author at the cost of losing one author. Given that we have a small dataset, it might be better to keep all authors and deal with the imbalance in other ways (e.g., data augmentation, class weighting) rather than removing an entire author from the dataset.
-    min_samples = 20 
-
-    df = df.groupby("author").filter(lambda x: len(x) >= min_samples)
-    print(f"\nAfter filtering authors with < {min_samples} samples:")   
-
-
-    print(f"[filter] Dataset reduced to {len(df)} rows after removing small authors")
 
     train_df, val_df, test_df = stratified_split(df)
     verify_split(train_df, val_df, test_df, df)

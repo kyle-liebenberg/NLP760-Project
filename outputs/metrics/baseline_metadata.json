@@ -1,0 +1,15 @@
+{
+  "random_state": 42,
+  "max_features": 10000,
+  "dataset_sizes": {
+    "train": 109,
+    "test": 24
+  },
+  "models": [
+    "BoW_word_SVM",
+    "BoW_char_SVM",
+    "TFIDF_word_SVM",
+    "TFIDF_char_SVM",
+    "TFIDF_word_LogReg"
+  ]
+}
