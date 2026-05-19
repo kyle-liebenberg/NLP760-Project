@@ -1,0 +1,35 @@
+{
+  "random_state": 42,
+  "train_size": 109,
+  "val_size": 24,
+  "test_size": 24,
+  "author_counts": {
+    "train": {
+      "Mhlengi Shangase": 18,
+      "Nokubongwa Phenyane": 17,
+      "Zimbili Vilakazi": 17,
+      "Fanelesibonge Bengu": 17,
+      "Sabelo Nsele": 17,
+      "Nonkululeko Nhlapo": 15,
+      "Simangaliso Ntshangase": 8
+    },
+    "val": {
+      "Nokubongwa Phenyane": 4,
+      "Fanelesibonge Bengu": 4,
+      "Zimbili Vilakazi": 4,
+      "Sabelo Nsele": 4,
+      "Mhlengi Shangase": 3,
+      "Nonkululeko Nhlapo": 3,
+      "Simangaliso Ntshangase": 2
+    },
+    "test": {
+      "Zimbili Vilakazi": 4,
+      "Fanelesibonge Bengu": 4,
+      "Mhlengi Shangase": 4,
+      "Nonkululeko Nhlapo": 4,
+      "Sabelo Nsele": 4,
+      "Nokubongwa Phenyane": 3,
+      "Simangaliso Ntshangase": 1
+    }
+  }
+}
