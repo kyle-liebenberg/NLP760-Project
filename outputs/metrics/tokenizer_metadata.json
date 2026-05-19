@@ -1,35 +1,39 @@
 {
   "vocab_size": 3000,
   "min_frequency": 2,
-  "max_sequence_length": 840,
+  "max_sequence_length": 1012,
   "percentile": 95,
   "actual_vocab": 3000,
-  "num_classes": 7,
+  "num_classes": 11,
   "classes": [
+    "Charles Khuzwayo",
     "Fanelesibonge Bengu",
     "Mhlengi Shangase",
+    "Mthokozisi Mncuseni",
     "Nokubongwa Phenyane",
     "Nonkululeko Nhlapo",
     "Sabelo Nsele",
+    "Sibusiso Mdlalose",
     "Simangaliso Ntshangase",
+    "Zakhele Xaba",
     "Zimbili Vilakazi"
   ],
   "X_train_shape": [
-    109,
-    840
+    184,
+    1012
   ],
   "X_val_shape": [
-    24,
-    840
+    39,
+    1012
   ],
   "X_test_shape": [
-    24,
-    840
+    40,
+    1012
   ],
   "tokenizer_evaluation": {
-    "unk_rate_percent": 0.0057,
-    "fertility": 2.2769,
-    "truncation_rate_percent": 8.2803,
-    "vocab_coverage_percent": 95.8667
+    "unk_rate_percent": 0.0012,
+    "fertility": 2.3367,
+    "truncation_rate_percent": 4.5627,
+    "vocab_coverage_percent": 96.6333
   }
 }

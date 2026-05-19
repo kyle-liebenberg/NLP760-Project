@@ -16,7 +16,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 #Paths Configs 
-RAW_CSV    = os.path.join("data", "raw", "isizulu_authors_dataset_cleaned.csv")
+RAW_CSV    = os.path.join("data", "raw", "isizulu_authors_dataset.csv")
 SPLITS_DIR = os.path.join("data", "splits")
 METRICS_DIR = os.path.join("outputs", "metrics")
 
@@ -25,7 +25,6 @@ METRICS_DIR = os.path.join("outputs", "metrics")
 RANDOM_STATE = 42
 TEST_SIZE    = 0.15   # 15 % test
 VAL_SIZE     = 0.15   # 15 % val  (taken from the 30 % remainder)
-
 
 def load_data(path: str) -> pd.DataFrame:
     """Load raw CSV data and validate required columns exist"""
@@ -84,7 +83,6 @@ def stratified_split(df: pd.DataFrame,
     assert len(train_df) + len(val_df) + len(test_df) == len(df), \
     "Rows were lost during splitting"
 
-
     assert set(train_df["author"]) == set(df["author"]), \
     "Some authors are missing from training set"
 
@@ -135,15 +133,13 @@ def verify_split(train_df, val_df, test_df, original_df):
         print("   With only 11 articles for Simangaliso Ntshangase this can happen.")
         print("   If it occurs, try RANDOM_STATE=0 or 1 until all authors appear.")
     else:
-        print("\n  All 7 authors present in every split.")
-    
+        print("\n  All 11 authors present in every split.")
     
     # Check no overlap (using URL as a unique key)
     train_urls = set(train_df["url"])
     val_urls   = set(val_df["url"])
     test_urls  = set(test_df["url"])
     overlap = (train_urls & val_urls) | (train_urls & test_urls) | (val_urls & test_urls)
-
 
     if overlap:
         print(f"\nOVERLAP DETECTED: {len(overlap)} articles appear in multiple splits!")
@@ -170,9 +166,6 @@ def save_splits(train_df, val_df, test_df, splits_dir: str):
     val_df.to_csv(  os.path.join(splits_dir, "val.csv"),   index=False)
     test_df.to_csv( os.path.join(splits_dir, "test.csv"),  index=False)
     print(f"\n--  Splits saved to {splits_dir}/")
-
-
-
 
 def save_split_metadata(train_df, val_df, test_df, metrics_dir: str):
     """Save split sizes and author counts to JSON for reproducibility """

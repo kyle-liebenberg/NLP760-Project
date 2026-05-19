@@ -248,7 +248,7 @@ def print_summary_table(results: dict):
             best_f1  = r["f1_macro"]
             best_name = name
     print("=" * 65)
-    print(f"\n🏆  Best baseline: {best_name}  (F1 macro = {best_f1:.4f})")
+    print(f"\n   Best baseline: {best_name}  (F1 macro = {best_f1:.4f})")
     print(f"    CNN-LSTM (Sprint 2) must exceed F1 = {best_f1:.4f} to justify the approach.")
     return best_name
 
