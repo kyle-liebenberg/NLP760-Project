@@ -208,3 +208,7 @@ __marimo__/
 
 # DS store stuff
 .DS_Store
+
+# venv stuff
+venv/
+
