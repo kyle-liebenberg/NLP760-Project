@@ -1,11 +1,14 @@
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
-import time
+import os
 import re
+import time
+import requests
+import pandas as pd
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
 
 # Dictionary of our target authors and their profile URLs
-# I've added 'www.' to ensure the requests route correctly
 AUTHOR_PROFILES = {
     "Mhlengi Shangase": "https://www.isolezwe.co.za/authors/journalist/",
     "Zimbili Vilakazi": "https://www.isolezwe.co.za/authors/zee/",
@@ -18,49 +21,70 @@ AUTHOR_PROFILES = {
     "Sibusiso Mdlalose": "https://isolezwe.co.za/authors/mdlalose-wezemidlalo/",
     "Mthokozisi Mncuseni": "https://isolezwe.co.za/authors/your-football-guy/",
     "Charles Khuzwayo": "https://isolezwe.co.za/authors/entertainment/"
-
-    # Dropped Zwelakhe Ngcobo to prevent severe class imbalance
 }
 
-def get_article_links(profile_url):
-    """Scrapes an author's profile page and returns a list of their article URLs."""
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-    print(f"  -> Visiting profile: {profile_url}")
+# Configuration Constants
+MAX_ARTICLES_PER_AUTHOR = 80  # Target depth to fit your 50-100 proposal metric
+CLICKS_NEEDED = 4              # 1 initial load (25) + 4 clicks (~20-25 per click) = ~100 potential links
+OUTPUT_DIR = 'data/raw'
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, 'isizulu_authors_dataset.csv')
+
+def get_article_links_selenium(profile_url, clicks=CLICKS_NEEDED):
+    """Visits an author profile page, clicks 'Load More' multiple times to 
+    bypass the 25-article rendering cap, and collects all unique article links."""
+    print(f"  -> Launching headless browser for: {profile_url}")
+    
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+    
+    driver = webdriver.Chrome(options=chrome_options)
+    article_links = []
     
     try:
-        response = requests.get(profile_url, headers=headers, timeout=10)
-        if response.status_code != 200:
-            print(f"  -> Failed to load profile. Status: {response.status_code}")
-            return []
-            
-        soup = BeautifulSoup(response.content, 'html.parser')
-        article_links = []
+        driver.get(profile_url)
+        time.sleep(4)  # Generous wait for initial layout render
         
-        # Find all links on the profile page
+        for click in range(clicks):
+            try:
+                # Target the 'Load more' element typical across IOL layouts
+                load_more_btn = driver.find_element(By.XPATH, "//*[contains(text(), 'Load more') or contains(text(), 'Load More')]")
+                driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", load_more_btn)
+                time.sleep(1)
+                load_more_btn.click()
+                print(f"    [+] Clicked 'Load More' button ({click + 1}/{clicks})")
+                time.sleep(3)  # Give AJAX call time to pull downstream blocks
+            except Exception:
+                print("    [-] No further 'Load More' actions clickable or available.")
+                break
+                
+        # Parse the expanded DOM tree
+        soup = BeautifulSoup(driver.page_source, 'html.parser')
+        
         for a_tag in soup.find_all('a', href=True):
             href = a_tag['href']
             
-            # Heuristic to filter out general nav links. 
-            # Isolezwe article links usually contain a date (e.g., 2026-04-22)
-            # or are generally long strings ending in a word.
+            # Explicit category validation and absolute path verification
             if ('/izindaba/' in href or '/ezemidlalo/' in href or '/ezokungcebeleka/' in href) and re.search(r'\d{4}-\d{2}-\d{2}', href):
-                # Make sure it's a full URL
                 if href.startswith('/'):
                     href = "https://www.isolezwe.co.za" + href
                 
-                # Prevent duplicates and ignore category homepages
                 if href not in article_links and len(href) > 40:
                     article_links.append(href)
                     
-        return article_links
-        
     except Exception as e:
-        print(f"  -> Error fetching links: {e}")
-        return []
+        print(f"    [!] Browser automation error on profile: {e}")
+    finally:
+        driver.quit()
+        
+    return article_links
 
 def scrape_article_text(url):
-    """Visits an article and extracts the paragraph text."""
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+    """Visits a raw article URL and extracts the paragraph texts while stripping
+    image descriptors and baseline structural metadata noise."""
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
     try:
         response = requests.get(url, headers=headers, timeout=10)
         if response.status_code != 200:
@@ -69,34 +93,51 @@ def scrape_article_text(url):
         soup = BeautifulSoup(response.content, 'html.parser')
         paragraphs = soup.find_all('p')
         
-        # Join paragraphs. We ignore very short paragraphs to filter out photo credits/ads
-        full_text = " ".join([p.get_text().strip() for p in paragraphs if len(p.get_text().strip()) > 20])
-        return full_text
+        cleaned_paragraphs = []
+        for p in paragraphs:
+            p_text = p.get_text().strip()
+            
+            # Filter out short fragments (like single-word tags, share buttons, photo descriptors)
+            if len(p_text) <= 20:
+                continue
+                
+            # Clean off media credits string structures (e.g., 'Image: Name / Independent Newspapers')
+            # This protects your CNN-LSTM from building biases around photographer credits
+            if p_text.startswith("Image:"):
+                p_text = re.sub(r'^Image:.*?([Nn]ewspapers|[Mm]edia|[Ii]solezwe|[Nn]ewspaper)\s*', '', p_text).strip()
+                
+            if p_text:
+                cleaned_paragraphs.append(p_text)
+                
+        full_text = " ".join(cleaned_paragraphs)
+        return full_text if len(full_text) > 150 else None
         
-    except Exception as e:
+    except Exception:
         return None
 
 def main():
-    print("Starting Authorship Dataset Builder...")
+    print("=" * 60)
+    print("  ISIZULU AUTHOR ATTRIBUTION DATASET BUILDER (SELENIUM UPGRADE)")
+    print("=" * 60)
     
-    dataset = [] # List to hold our scraped data
+    dataset = []
     
     for author, profile_url in AUTHOR_PROFILES.items():
-        print(f"\n[Scraping Author: {author}]")
+        print(f"\n[Processing Author: {author}]")
         
-        # 1. Get all article links from the profile
-        links = get_article_links(profile_url)
-        print(f"  -> Found {len(links)} potential articles.")
+        # 1. Gather deep historical collection via automated page expansions
+        links = get_article_links_selenium(profile_url, clicks=CLICKS_NEEDED)
+        print(f"  -> Discovered {len(links)} cumulative article links.")
         
-        # 2. Limit to max 50 to keep classes balanced
-        links = links[:50] 
+        # 2. Slice to the maximum limit to guarantee dynamic balance 
+        links = links[:MAX_ARTICLES_PER_AUTHOR]
         
-        # 3. Scrape the text for each link
+        # 3. Request each separate text document block
         successful_scrapes = 0
         for i, link in enumerate(links):
             text = scrape_article_text(link)
             
-            if text and len(text) > 150: # Only keep articles with actual content
+            if text:
                 dataset.append({
                     'author': author,
                     'url': link,
@@ -104,28 +145,28 @@ def main():
                 })
                 successful_scrapes += 1
                 
-            # Be polite to the server to avoid getting IP banned
-            time.sleep(1.5)
+            # Anti-ban throttle
+            time.sleep(1.2)
             
-            # Print a little progress bar
-            if (i + 1) % 5 == 0:
-                print(f"     ...scraped {successful_scrapes} texts so far...")
+            if (i + 1) % 10 == 0:
+                print(f"     Processed {i + 1}/{len(links)} URLs... Saved: {successful_scrapes}")
                 
-        print(f"  -> Finished {author}. Successfully grabbed {successful_scrapes} articles.")
+        print(f"  -> Finished {author}. Total clean records: {successful_scrapes}")
 
-    # 4. Save everything to a CSV
+    # 4. Save and summarize outputs
     if dataset:
-        print("\nSaving dataset to data/raw/isizulu_authors_dataset.csv...")
+        os.makedirs(OUTPUT_DIR, exist_ok=True)
         df = pd.DataFrame(dataset)
+        df.to_csv(OUTPUT_FILE, index=False, encoding='utf-8')
         
-        # Ensure data folder exists!
-        df.to_csv('data/raw/isizulu_authors_dataset.csv', index=False, encoding='utf-8')
-        
-        print("\n--- Summary ---")
+        print("\n" + "=" * 50)
+        print("  DATA COLLECTION SUMMARY")
+        print("=" * 50)
         print(df['author'].value_counts())
-        print("Done!")
+        print(f"\nSaved file location: {OUTPUT_FILE}")
+        print("Dataset verification complete. Ready for Weeks 3-4 Model Development!")
     else:
-        print("\nNo data was scraped. Check the logs above.")
+        print("\n[!] Execution completed with 0 records scraped. Verify selector nodes.")
 
 if __name__ == "__main__":
     main()

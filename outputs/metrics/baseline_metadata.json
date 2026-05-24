@@ -2,8 +2,8 @@
   "random_state": 42,
   "max_features": 10000,
   "dataset_sizes": {
-    "train": 184,
-    "test": 40
+    "train": 1428,
+    "test": 306
   },
   "models": [
     "BoW_word_SVM",

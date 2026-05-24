@@ -1,436 +1,436 @@
 {
   "BoW_word_SVM": {
-    "f1_macro": 0.6697,
-    "precision_macro": 0.6853,
-    "recall_macro": 0.7045,
-    "accuracy": 0.725,
+    "f1_macro": 0.9034,
+    "precision_macro": 0.9064,
+    "recall_macro": 0.9025,
+    "accuracy": 0.902,
     "per_class": {
       "Charles Khuzwayo": {
-        "precision": 0.5,
-        "recall": 0.5,
-        "f1-score": 0.5,
-        "support": 4.0
+        "precision": 0.8888888888888888,
+        "recall": 0.8571428571428571,
+        "f1-score": 0.8727272727272727,
+        "support": 28.0
       },
       "Fanelesibonge Bengu": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1-score": 0.0,
-        "support": 3.0
+        "precision": 0.8709677419354839,
+        "recall": 0.9310344827586207,
+        "f1-score": 0.9,
+        "support": 29.0
       },
       "Mhlengi Shangase": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
-        "support": 4.0
+        "precision": 0.9285714285714286,
+        "recall": 0.9285714285714286,
+        "f1-score": 0.9285714285714286,
+        "support": 28.0
       },
       "Mthokozisi Mncuseni": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
-        "support": 4.0
+        "precision": 0.84375,
+        "recall": 0.9642857142857143,
+        "f1-score": 0.9,
+        "support": 28.0
       },
       "Nokubongwa Phenyane": {
-        "precision": 0.5714285714285714,
-        "recall": 1.0,
-        "f1-score": 0.7272727272727273,
-        "support": 4.0
+        "precision": 0.8846153846153846,
+        "recall": 0.8518518518518519,
+        "f1-score": 0.8679245283018868,
+        "support": 27.0
       },
       "Nonkululeko Nhlapo": {
-        "precision": 0.75,
-        "recall": 1.0,
-        "f1-score": 0.8571428571428571,
-        "support": 3.0
+        "precision": 0.9411764705882353,
+        "recall": 0.9411764705882353,
+        "f1-score": 0.9411764705882353,
+        "support": 17.0
       },
       "Sabelo Nsele": {
-        "precision": 0.8,
-        "recall": 1.0,
-        "f1-score": 0.8888888888888888,
-        "support": 4.0
+        "precision": 0.8666666666666667,
+        "recall": 0.896551724137931,
+        "f1-score": 0.8813559322033898,
+        "support": 29.0
       },
       "Sibusiso Mdlalose": {
-        "precision": 0.6666666666666666,
-        "recall": 0.5,
-        "f1-score": 0.5714285714285714,
-        "support": 4.0
+        "precision": 1.0,
+        "recall": 0.896551724137931,
+        "f1-score": 0.9454545454545454,
+        "support": 29.0
       },
       "Simangaliso Ntshangase": {
-        "precision": 0.5,
-        "recall": 0.6666666666666666,
-        "f1-score": 0.5714285714285714,
-        "support": 3.0
+        "precision": 0.9642857142857143,
+        "recall": 0.9,
+        "f1-score": 0.9310344827586207,
+        "support": 30.0
       },
       "Zakhele Xaba": {
-        "precision": 0.75,
-        "recall": 0.75,
-        "f1-score": 0.75,
-        "support": 4.0
+        "precision": 0.9166666666666666,
+        "recall": 0.8461538461538461,
+        "f1-score": 0.88,
+        "support": 26.0
       },
       "Zimbili Vilakazi": {
-        "precision": 1.0,
-        "recall": 0.3333333333333333,
-        "f1-score": 0.5,
-        "support": 3.0
+        "precision": 0.8648648648648649,
+        "recall": 0.9142857142857143,
+        "f1-score": 0.8888888888888888,
+        "support": 35.0
       },
-      "accuracy": 0.725,
+      "accuracy": 0.9019607843137255,
       "macro avg": {
-        "precision": 0.6852813852813853,
-        "recall": 0.7045454545454546,
-        "f1-score": 0.6696510560146923,
-        "support": 40.0
+        "precision": 0.906404893371212,
+        "recall": 0.9025096194467391,
+        "f1-score": 0.9033757772267518,
+        "support": 306.0
       },
       "weighted avg": {
-        "precision": 0.6975595238095238,
-        "recall": 0.725,
-        "f1-score": 0.688401875901876,
-        "support": 40.0
+        "precision": 0.9046473109645153,
+        "recall": 0.9019607843137255,
+        "f1-score": 0.9021894619165503,
+        "support": 306.0
       }
     }
   },
   "BoW_char_SVM": {
-    "f1_macro": 0.8473,
-    "precision_macro": 0.8606,
-    "recall_macro": 0.8485,
-    "accuracy": 0.85,
+    "f1_macro": 0.8776,
+    "precision_macro": 0.8797,
+    "recall_macro": 0.8787,
+    "accuracy": 0.8791,
     "per_class": {
       "Charles Khuzwayo": {
-        "precision": 0.75,
-        "recall": 0.75,
-        "f1-score": 0.75,
-        "support": 4.0
+        "precision": 0.7931034482758621,
+        "recall": 0.8214285714285714,
+        "f1-score": 0.8070175438596491,
+        "support": 28.0
       },
       "Fanelesibonge Bengu": {
-        "precision": 0.6666666666666666,
-        "recall": 0.6666666666666666,
-        "f1-score": 0.6666666666666666,
-        "support": 3.0
+        "precision": 0.8666666666666667,
+        "recall": 0.896551724137931,
+        "f1-score": 0.8813559322033898,
+        "support": 29.0
       },
       "Mhlengi Shangase": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
-        "support": 4.0
+        "precision": 0.9629629629629629,
+        "recall": 0.9285714285714286,
+        "f1-score": 0.9454545454545454,
+        "support": 28.0
       },
       "Mthokozisi Mncuseni": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
-        "support": 4.0
+        "precision": 0.8125,
+        "recall": 0.9285714285714286,
+        "f1-score": 0.8666666666666667,
+        "support": 28.0
       },
       "Nokubongwa Phenyane": {
-        "precision": 0.8,
-        "recall": 1.0,
-        "f1-score": 0.8888888888888888,
-        "support": 4.0
+        "precision": 0.8666666666666667,
+        "recall": 0.9629629629629629,
+        "f1-score": 0.9122807017543859,
+        "support": 27.0
       },
       "Nonkululeko Nhlapo": {
-        "precision": 0.75,
-        "recall": 1.0,
+        "precision": 0.8333333333333334,
+        "recall": 0.8823529411764706,
         "f1-score": 0.8571428571428571,
-        "support": 3.0
+        "support": 17.0
       },
       "Sabelo Nsele": {
-        "precision": 1.0,
-        "recall": 0.75,
-        "f1-score": 0.8571428571428571,
-        "support": 4.0
+        "precision": 0.8333333333333334,
+        "recall": 0.8620689655172413,
+        "f1-score": 0.847457627118644,
+        "support": 29.0
       },
       "Sibusiso Mdlalose": {
-        "precision": 0.75,
-        "recall": 0.75,
-        "f1-score": 0.75,
-        "support": 4.0
+        "precision": 1.0,
+        "recall": 0.8620689655172413,
+        "f1-score": 0.9259259259259259,
+        "support": 29.0
       },
       "Simangaliso Ntshangase": {
-        "precision": 1.0,
-        "recall": 0.6666666666666666,
-        "f1-score": 0.8,
-        "support": 3.0
+        "precision": 0.9629629629629629,
+        "recall": 0.8666666666666667,
+        "f1-score": 0.9122807017543859,
+        "support": 30.0
       },
       "Zakhele Xaba": {
-        "precision": 0.75,
-        "recall": 0.75,
-        "f1-score": 0.75,
-        "support": 4.0
+        "precision": 0.8333333333333334,
+        "recall": 0.7692307692307693,
+        "f1-score": 0.8,
+        "support": 26.0
       },
       "Zimbili Vilakazi": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
-        "support": 3.0
+        "precision": 0.9117647058823529,
+        "recall": 0.8857142857142857,
+        "f1-score": 0.8985507246376812,
+        "support": 35.0
       },
-      "accuracy": 0.85,
+      "accuracy": 0.8790849673202614,
       "macro avg": {
-        "precision": 0.8606060606060606,
-        "recall": 0.8484848484848484,
-        "f1-score": 0.8472582972582973,
-        "support": 40.0
+        "precision": 0.8796934012197704,
+        "recall": 0.8787444281359089,
+        "f1-score": 0.877648475138012,
+        "support": 306.0
       },
       "weighted avg": {
-        "precision": 0.8612500000000001,
-        "recall": 0.85,
-        "f1-score": 0.8488888888888889,
-        "support": 40.0
+        "precision": 0.8831825047150056,
+        "recall": 0.8790849673202614,
+        "f1-score": 0.879555667233341,
+        "support": 306.0
       }
     }
   },
   "TFIDF_word_SVM": {
-    "f1_macro": 0.8582,
-    "precision_macro": 0.8924,
-    "recall_macro": 0.8636,
-    "accuracy": 0.875,
+    "f1_macro": 0.936,
+    "precision_macro": 0.9412,
+    "recall_macro": 0.9343,
+    "accuracy": 0.9346,
     "per_class": {
       "Charles Khuzwayo": {
-        "precision": 0.75,
-        "recall": 0.75,
-        "f1-score": 0.75,
-        "support": 4.0
+        "precision": 0.9583333333333334,
+        "recall": 0.8214285714285714,
+        "f1-score": 0.8846153846153846,
+        "support": 28.0
       },
       "Fanelesibonge Bengu": {
         "precision": 1.0,
-        "recall": 0.3333333333333333,
-        "f1-score": 0.5,
-        "support": 3.0
+        "recall": 0.896551724137931,
+        "f1-score": 0.9454545454545454,
+        "support": 29.0
       },
       "Mhlengi Shangase": {
-        "precision": 0.8,
+        "precision": 0.9333333333333333,
         "recall": 1.0,
-        "f1-score": 0.8888888888888888,
-        "support": 4.0
+        "f1-score": 0.9655172413793104,
+        "support": 28.0
       },
       "Mthokozisi Mncuseni": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
-        "support": 4.0
+        "precision": 0.9642857142857143,
+        "recall": 0.9642857142857143,
+        "f1-score": 0.9642857142857143,
+        "support": 28.0
       },
       "Nokubongwa Phenyane": {
-        "precision": 0.8,
-        "recall": 1.0,
-        "f1-score": 0.8888888888888888,
-        "support": 4.0
+        "precision": 0.78125,
+        "recall": 0.9259259259259259,
+        "f1-score": 0.847457627118644,
+        "support": 27.0
       },
       "Nonkululeko Nhlapo": {
         "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
-        "support": 3.0
+        "recall": 0.9411764705882353,
+        "f1-score": 0.9696969696969697,
+        "support": 17.0
       },
       "Sabelo Nsele": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
-        "support": 4.0
+        "precision": 0.9310344827586207,
+        "recall": 0.9310344827586207,
+        "f1-score": 0.9310344827586207,
+        "support": 29.0
       },
       "Sibusiso Mdlalose": {
-        "precision": 1.0,
-        "recall": 0.75,
-        "f1-score": 0.8571428571428571,
-        "support": 4.0
+        "precision": 0.9642857142857143,
+        "recall": 0.9310344827586207,
+        "f1-score": 0.9473684210526315,
+        "support": 29.0
       },
       "Simangaliso Ntshangase": {
-        "precision": 0.6666666666666666,
-        "recall": 0.6666666666666666,
-        "f1-score": 0.6666666666666666,
-        "support": 3.0
+        "precision": 1.0,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.9655172413793104,
+        "support": 30.0
       },
       "Zakhele Xaba": {
-        "precision": 0.8,
-        "recall": 1.0,
-        "f1-score": 0.8888888888888888,
-        "support": 4.0
+        "precision": 0.9259259259259259,
+        "recall": 0.9615384615384616,
+        "f1-score": 0.9433962264150944,
+        "support": 26.0
       },
       "Zimbili Vilakazi": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
-        "support": 3.0
+        "precision": 0.8947368421052632,
+        "recall": 0.9714285714285714,
+        "f1-score": 0.9315068493150684,
+        "support": 35.0
       },
-      "accuracy": 0.875,
+      "accuracy": 0.934640522875817,
       "macro avg": {
-        "precision": 0.8924242424242425,
-        "recall": 0.8636363636363636,
-        "f1-score": 0.8582251082251081,
-        "support": 40.0
+        "precision": 0.9411986678207186,
+        "recall": 0.9343397943803623,
+        "f1-score": 0.9359864275882994,
+        "support": 306.0
       },
       "weighted avg": {
-        "precision": 0.89,
-        "recall": 0.875,
-        "f1-score": 0.8648809523809524,
-        "support": 40.0
+        "precision": 0.9392632873487277,
+        "recall": 0.934640522875817,
+        "f1-score": 0.9351579830974203,
+        "support": 306.0
       }
     }
   },
   "TFIDF_char_SVM": {
-    "f1_macro": 0.8379,
-    "precision_macro": 0.8773,
-    "recall_macro": 0.8409,
-    "accuracy": 0.85,
+    "f1_macro": 0.9149,
+    "precision_macro": 0.9188,
+    "recall_macro": 0.915,
+    "accuracy": 0.915,
     "per_class": {
       "Charles Khuzwayo": {
-        "precision": 0.75,
-        "recall": 0.75,
-        "f1-score": 0.75,
-        "support": 4.0
+        "precision": 0.9583333333333334,
+        "recall": 0.8214285714285714,
+        "f1-score": 0.8846153846153846,
+        "support": 28.0
       },
       "Fanelesibonge Bengu": {
-        "precision": 1.0,
-        "recall": 0.3333333333333333,
-        "f1-score": 0.5,
-        "support": 3.0
+        "precision": 0.8928571428571429,
+        "recall": 0.8620689655172413,
+        "f1-score": 0.8771929824561403,
+        "support": 29.0
       },
       "Mhlengi Shangase": {
-        "precision": 0.8,
+        "precision": 0.9333333333333333,
         "recall": 1.0,
-        "f1-score": 0.8888888888888888,
-        "support": 4.0
+        "f1-score": 0.9655172413793104,
+        "support": 28.0
       },
       "Mthokozisi Mncuseni": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
-        "support": 4.0
+        "precision": 0.9285714285714286,
+        "recall": 0.9285714285714286,
+        "f1-score": 0.9285714285714286,
+        "support": 28.0
       },
       "Nokubongwa Phenyane": {
-        "precision": 0.8,
+        "precision": 0.8181818181818182,
         "recall": 1.0,
-        "f1-score": 0.8888888888888888,
-        "support": 4.0
+        "f1-score": 0.9,
+        "support": 27.0
       },
       "Nonkululeko Nhlapo": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
-        "support": 3.0
+        "precision": 0.9411764705882353,
+        "recall": 0.9411764705882353,
+        "f1-score": 0.9411764705882353,
+        "support": 17.0
       },
       "Sabelo Nsele": {
-        "precision": 0.8,
-        "recall": 1.0,
-        "f1-score": 0.8888888888888888,
-        "support": 4.0
+        "precision": 0.9310344827586207,
+        "recall": 0.9310344827586207,
+        "f1-score": 0.9310344827586207,
+        "support": 29.0
       },
       "Sibusiso Mdlalose": {
-        "precision": 0.75,
-        "recall": 0.75,
-        "f1-score": 0.75,
-        "support": 4.0
+        "precision": 0.9285714285714286,
+        "recall": 0.896551724137931,
+        "f1-score": 0.9122807017543859,
+        "support": 29.0
       },
       "Simangaliso Ntshangase": {
-        "precision": 1.0,
-        "recall": 0.6666666666666666,
-        "f1-score": 0.8,
-        "support": 3.0
+        "precision": 0.9629629629629629,
+        "recall": 0.8666666666666667,
+        "f1-score": 0.9122807017543859,
+        "support": 30.0
       },
       "Zakhele Xaba": {
-        "precision": 0.75,
-        "recall": 0.75,
-        "f1-score": 0.75,
-        "support": 4.0
+        "precision": 0.9166666666666666,
+        "recall": 0.8461538461538461,
+        "f1-score": 0.88,
+        "support": 26.0
       },
       "Zimbili Vilakazi": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
-        "support": 3.0
+        "precision": 0.8947368421052632,
+        "recall": 0.9714285714285714,
+        "f1-score": 0.9315068493150684,
+        "support": 35.0
       },
-      "accuracy": 0.85,
+      "accuracy": 0.9150326797385621,
       "macro avg": {
-        "precision": 0.8772727272727273,
-        "recall": 0.8409090909090909,
-        "f1-score": 0.8378787878787878,
-        "support": 40.0
+        "precision": 0.9187659918118395,
+        "recall": 0.9150073388410103,
+        "f1-score": 0.9149251130175419,
+        "support": 306.0
       },
       "weighted avg": {
-        "precision": 0.865,
-        "recall": 0.85,
-        "f1-score": 0.8391666666666666,
-        "support": 40.0
+        "precision": 0.9180294641336953,
+        "recall": 0.9150326797385621,
+        "f1-score": 0.9145412129039728,
+        "support": 306.0
       }
     }
   },
   "TFIDF_word_LogReg": {
-    "f1_macro": 0.8602,
-    "precision_macro": 0.9045,
-    "recall_macro": 0.8636,
-    "accuracy": 0.875,
+    "f1_macro": 0.8971,
+    "precision_macro": 0.906,
+    "recall_macro": 0.8939,
+    "accuracy": 0.8954,
     "per_class": {
       "Charles Khuzwayo": {
-        "precision": 0.75,
-        "recall": 0.75,
-        "f1-score": 0.75,
-        "support": 4.0
+        "precision": 0.92,
+        "recall": 0.8214285714285714,
+        "f1-score": 0.8679245283018868,
+        "support": 28.0
       },
       "Fanelesibonge Bengu": {
-        "precision": 1.0,
-        "recall": 0.3333333333333333,
-        "f1-score": 0.5,
-        "support": 3.0
+        "precision": 0.9230769230769231,
+        "recall": 0.8275862068965517,
+        "f1-score": 0.8727272727272727,
+        "support": 29.0
       },
       "Mhlengi Shangase": {
-        "precision": 0.8,
+        "precision": 0.9032258064516129,
         "recall": 1.0,
-        "f1-score": 0.8888888888888888,
-        "support": 4.0
+        "f1-score": 0.9491525423728814,
+        "support": 28.0
       },
       "Mthokozisi Mncuseni": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
-        "support": 4.0
+        "precision": 0.9259259259259259,
+        "recall": 0.8928571428571429,
+        "f1-score": 0.9090909090909091,
+        "support": 28.0
       },
       "Nokubongwa Phenyane": {
-        "precision": 0.8,
-        "recall": 1.0,
-        "f1-score": 0.8888888888888888,
-        "support": 4.0
+        "precision": 0.7575757575757576,
+        "recall": 0.9259259259259259,
+        "f1-score": 0.8333333333333334,
+        "support": 27.0
       },
       "Nonkululeko Nhlapo": {
         "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
-        "support": 3.0
+        "recall": 0.8823529411764706,
+        "f1-score": 0.9375,
+        "support": 17.0
       },
       "Sabelo Nsele": {
-        "precision": 0.8,
-        "recall": 1.0,
-        "f1-score": 0.8888888888888888,
-        "support": 4.0
+        "precision": 0.9285714285714286,
+        "recall": 0.896551724137931,
+        "f1-score": 0.9122807017543859,
+        "support": 29.0
       },
       "Sibusiso Mdlalose": {
-        "precision": 1.0,
-        "recall": 0.75,
-        "f1-score": 0.8571428571428571,
-        "support": 4.0
+        "precision": 0.896551724137931,
+        "recall": 0.896551724137931,
+        "f1-score": 0.896551724137931,
+        "support": 29.0
       },
       "Simangaliso Ntshangase": {
-        "precision": 1.0,
-        "recall": 0.6666666666666666,
-        "f1-score": 0.8,
-        "support": 3.0
+        "precision": 0.9615384615384616,
+        "recall": 0.8333333333333334,
+        "f1-score": 0.8928571428571429,
+        "support": 30.0
       },
       "Zakhele Xaba": {
-        "precision": 0.8,
-        "recall": 1.0,
-        "f1-score": 0.8888888888888888,
-        "support": 4.0
+        "precision": 0.92,
+        "recall": 0.8846153846153846,
+        "f1-score": 0.9019607843137255,
+        "support": 26.0
       },
       "Zimbili Vilakazi": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
-        "support": 3.0
+        "precision": 0.8292682926829268,
+        "recall": 0.9714285714285714,
+        "f1-score": 0.8947368421052632,
+        "support": 35.0
       },
-      "accuracy": 0.875,
+      "accuracy": 0.8954248366013072,
       "macro avg": {
-        "precision": 0.9045454545454547,
-        "recall": 0.8636363636363636,
-        "f1-score": 0.8602453102453101,
-        "support": 40.0
+        "precision": 0.9059758472691789,
+        "recall": 0.893875593267074,
+        "f1-score": 0.8971014346358849,
+        "support": 306.0
       },
       "weighted avg": {
-        "precision": 0.8950000000000001,
-        "recall": 0.875,
-        "f1-score": 0.8637698412698412,
-        "support": 40.0
+        "precision": 0.9016965367613562,
+        "recall": 0.8954248366013072,
+        "f1-score": 0.8957121530881125,
+        "support": 306.0
       }
     }
   }

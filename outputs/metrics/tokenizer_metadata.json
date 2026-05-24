@@ -1,7 +1,7 @@
 {
   "vocab_size": 3000,
   "min_frequency": 2,
-  "max_sequence_length": 1012,
+  "max_sequence_length": 404,
   "percentile": 95,
   "actual_vocab": 3000,
   "num_classes": 11,
@@ -19,21 +19,21 @@
     "Zimbili Vilakazi"
   ],
   "X_train_shape": [
-    184,
-    1012
+    1428,
+    404
   ],
   "X_val_shape": [
-    39,
-    1012
+    306,
+    404
   ],
   "X_test_shape": [
-    40,
-    1012
+    306,
+    404
   ],
   "tokenizer_evaluation": {
-    "unk_rate_percent": 0.0012,
-    "fertility": 2.3367,
-    "truncation_rate_percent": 4.5627,
-    "vocab_coverage_percent": 96.6333
+    "unk_rate_percent": 0.0005,
+    "fertility": 2.3534,
+    "truncation_rate_percent": 5.1471,
+    "vocab_coverage_percent": 98.6667
   }
 }

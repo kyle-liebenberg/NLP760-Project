@@ -1,47 +1,8 @@
 {
   "random_state": 42,
-  "train_size": 184,
-  "val_size": 39,
-  "test_size": 40,
-  "author_counts": {
-    "train": {
-      "Fanelesibonge Bengu": 18,
-      "Charles Khuzwayo": 18,
-      "Sabelo Nsele": 18,
-      "Zimbili Vilakazi": 18,
-      "Zakhele Xaba": 17,
-      "Nokubongwa Phenyane": 17,
-      "Sibusiso Mdlalose": 17,
-      "Mthokozisi Mncuseni": 17,
-      "Mhlengi Shangase": 17,
-      "Nonkululeko Nhlapo": 14,
-      "Simangaliso Ntshangase": 13
-    },
-    "val": {
-      "Mhlengi Shangase": 4,
-      "Fanelesibonge Bengu": 4,
-      "Zakhele Xaba": 4,
-      "Zimbili Vilakazi": 4,
-      "Mthokozisi Mncuseni": 4,
-      "Nokubongwa Phenyane": 4,
-      "Charles Khuzwayo": 3,
-      "Simangaliso Ntshangase": 3,
-      "Sabelo Nsele": 3,
-      "Nonkululeko Nhlapo": 3,
-      "Sibusiso Mdlalose": 3
-    },
-    "test": {
-      "Nokubongwa Phenyane": 4,
-      "Charles Khuzwayo": 4,
-      "Sabelo Nsele": 4,
-      "Zakhele Xaba": 4,
-      "Mhlengi Shangase": 4,
-      "Mthokozisi Mncuseni": 4,
-      "Sibusiso Mdlalose": 4,
-      "Fanelesibonge Bengu": 3,
-      "Simangaliso Ntshangase": 3,
-      "Nonkululeko Nhlapo": 3,
-      "Zimbili Vilakazi": 3
-    }
-  }
+  "chunk_size": 150,
+  "chunk_overlap": 30,
+  "train_chunks": 1428,
+  "val_chunks": 306,
+  "test_chunks": 306
 }
