@@ -10,7 +10,7 @@ This project applies subword embeddings to authorship attribution, aiming to ide
 
 ```bash
 brew install python@3.12
-/opt/homebrew/opt/python@3.12/bin/python3 -m venv venv
+/opt/homebrew/bin/python3.12 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -22,6 +22,11 @@ To re-run the data scraper, also install: `pip install requests beautifulsoup4`.
 ---
 
 ## Pipeline overview
+
+To run the entire pipeline of the program:
+```bash
+python3 run_pipeline.py
+```
 
 Run scripts from the project root **in this order**:
 

@@ -12,10 +12,15 @@ Outputs:
 import os
 import json
 import numpy as np
+
+import tensorflow as tf
+import keras
+
+keras.utils.set_random_seed(19)
+tf.config.experimental.enable_op_determinism()
+
 from sklearn.metrics import classification_report, f1_score, accuracy_score, precision_score, recall_score
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
-
-# Import our modularized model blueprint
 from cnn_lstm_model import build_cnn_lstm
 
 # ── Paths ──────────────────────────────────────────────────

@@ -110,3 +110,10 @@ Recall    : 0.1162
 - Loosen the Dropout Chokehold: Reduce the internal dropout rates to a moderate 0.3 (30%) during feature extraction. This leaves a cleaner signal for the network while still preventing it from memorizing specific training phrases.
 - Remove Dense Head L2 Regularization: We will eliminate the L2 weight penalty on the dense head. The combination of structural dropout and your teammate's validation early stopping callback is already a sufficient defense against overfitting.
 - Leverage Spatial Padding: We will maintain padding='same' on the convolutional boundary to preserve edge subword tokens (like paragraph-starting subject concords).
+- Results:
+```
+F1 Macro  : 0.8357
+Accuracy  : 0.8333
+Precision : 0.8550
+Recall    : 0.8386
+```
