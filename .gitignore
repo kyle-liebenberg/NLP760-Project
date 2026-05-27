@@ -205,3 +205,10 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# DS store stuff
+.DS_Store
+
+# venv stuff
+venv/
+

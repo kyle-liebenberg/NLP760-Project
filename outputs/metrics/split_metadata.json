@@ -1,0 +1,8 @@
+{
+  "random_state": 42,
+  "chunk_size": 150,
+  "chunk_overlap": 30,
+  "train_chunks": 1428,
+  "val_chunks": 306,
+  "test_chunks": 306
+}
