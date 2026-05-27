@@ -8,7 +8,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
-# Dictionary of our target authors and their profile URLs
+# authors and their Isolezwe URLs
 AUTHOR_PROFILES = {
     "Mhlengi Shangase": "https://www.isolezwe.co.za/authors/journalist/",
     "Zimbili Vilakazi": "https://www.isolezwe.co.za/authors/zee/",
@@ -23,9 +23,8 @@ AUTHOR_PROFILES = {
     "Charles Khuzwayo": "https://isolezwe.co.za/authors/entertainment/"
 }
 
-# Configuration Constants
-MAX_ARTICLES_PER_AUTHOR = 80  # Target depth to fit your 50-100 proposal metric
-CLICKS_NEEDED = 4              # 1 initial load (25) + 4 clicks (~20-25 per click) = ~100 potential links
+MAX_ARTICLES_PER_AUTHOR = 80 
+CLICKS_NEEDED = 4 # the load more button
 OUTPUT_DIR = 'data/raw'
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, 'isizulu_authors_dataset.csv')
 
@@ -45,28 +44,25 @@ def get_article_links_selenium(profile_url, clicks=CLICKS_NEEDED):
     
     try:
         driver.get(profile_url)
-        time.sleep(4)  # Generous wait for initial layout render
+        time.sleep(4)  # wait as to not overload Isolezwe 
         
         for click in range(clicks):
             try:
-                # Target the 'Load more' element typical across IOL layouts
                 load_more_btn = driver.find_element(By.XPATH, "//*[contains(text(), 'Load more') or contains(text(), 'Load More')]")
                 driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", load_more_btn)
                 time.sleep(1)
                 load_more_btn.click()
                 print(f"    [+] Clicked 'Load More' button ({click + 1}/{clicks})")
-                time.sleep(3)  # Give AJAX call time to pull downstream blocks
+                time.sleep(3)
             except Exception:
                 print("    [-] No further 'Load More' actions clickable or available.")
                 break
                 
-        # Parse the expanded DOM tree
         soup = BeautifulSoup(driver.page_source, 'html.parser')
         
         for a_tag in soup.find_all('a', href=True):
             href = a_tag['href']
             
-            # Explicit category validation and absolute path verification
             if ('/izindaba/' in href or '/ezemidlalo/' in href or '/ezokungcebeleka/' in href) and re.search(r'\d{4}-\d{2}-\d{2}', href):
                 if href.startswith('/'):
                     href = "https://www.isolezwe.co.za" + href
@@ -97,12 +93,11 @@ def scrape_article_text(url):
         for p in paragraphs:
             p_text = p.get_text().strip()
             
-            # Filter out short fragments (like single-word tags, share buttons, photo descriptors)
+            # get rid of short fragments (like single-word tags, share buttons, photo descriptors)
             if len(p_text) <= 20:
                 continue
                 
-            # Clean off media credits string structures (e.g., 'Image: Name / Independent Newspapers')
-            # This protects your CNN-LSTM from building biases around photographer credits
+            # get rid of image text stuff
             if p_text.startswith("Image:"):
                 p_text = re.sub(r'^Image:.*?([Nn]ewspapers|[Mm]edia|[Ii]solezwe|[Nn]ewspaper)\s*', '', p_text).strip()
                 
@@ -125,14 +120,11 @@ def main():
     for author, profile_url in AUTHOR_PROFILES.items():
         print(f"\n[Processing Author: {author}]")
         
-        # 1. Gather deep historical collection via automated page expansions
         links = get_article_links_selenium(profile_url, clicks=CLICKS_NEEDED)
         print(f"  -> Discovered {len(links)} cumulative article links.")
         
-        # 2. Slice to the maximum limit to guarantee dynamic balance 
         links = links[:MAX_ARTICLES_PER_AUTHOR]
         
-        # 3. Request each separate text document block
         successful_scrapes = 0
         for i, link in enumerate(links):
             text = scrape_article_text(link)
@@ -145,7 +137,7 @@ def main():
                 })
                 successful_scrapes += 1
                 
-            # Anti-ban throttle
+            # so we don't DOS them
             time.sleep(1.2)
             
             if (i + 1) % 10 == 0:
@@ -153,7 +145,6 @@ def main():
                 
         print(f"  -> Finished {author}. Total clean records: {successful_scrapes}")
 
-    # 4. Save and summarize outputs
     if dataset:
         os.makedirs(OUTPUT_DIR, exist_ok=True)
         df = pd.DataFrame(dataset)

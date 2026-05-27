@@ -1,8 +1,8 @@
 """
-src / preprocessing.py
+preprocessing.py
+-----------------
 
-Handles text chunking data augmentation and stratified splitting of the 
-expanded isiZulu authorship dataset.
+Handles text chunking data augmentation and stratified splitting of the isiZulu authorship dataset.
 """
 
 import os
@@ -11,18 +11,17 @@ import pandas as pd
 import re
 from sklearn.model_selection import train_test_split
 
-# Paths Configs 
 RAW_CSV    = os.path.join("data", "raw", "isizulu_authors_dataset.csv")
 SPLITS_DIR = os.path.join("data", "splits")
 METRICS_DIR = os.path.join("outputs", "metrics")
 
 RANDOM_STATE = 42
-TEST_SIZE    = 0.15   # 15% test
-VAL_SIZE     = 0.15   # 15% val  (taken from the 30% remainder)
+TEST_SIZE    = 0.15
+VAL_SIZE     = 0.15
 
-# Chunking Configuration for Data Augmentation
-CHUNK_SIZE   = 150    # Words per chunk
-CHUNK_OVERLAP = 30    # Words overlapping between adjacent chunks
+# chunking configuration for data augmentation
+CHUNK_SIZE   = 150
+CHUNK_OVERLAP = 30
 
 def load_data(path: str) -> pd.DataFrame:
     """Load raw CSV data and validate required columns exist"""
@@ -47,19 +46,17 @@ def chunk_text_data(df: pd.DataFrame, chunk_size=CHUNK_SIZE, overlap=CHUNK_OVERL
         url = row['url']
         words = str(row['text']).split()
         
-        # If an article is too short to even fill one chunk, keep it as is
+        # article too short for one chunk -> keep as is
         if len(words) <= chunk_size:
             chunked_records.append({'author': author, 'url': url, 'text': " ".join(words)})
             continue
             
-        # Sliding window implementation
         start = 0
         chunk_idx = 0
         while start < len(words):
             end = start + chunk_size
             chunk_words = words[start:end]
             
-            # Drop very tiny tail end fragments (less than 40 words) to minimize noise
             if len(chunk_words) < 40:
                 break
                 
@@ -79,7 +76,7 @@ def chunk_text_data(df: pd.DataFrame, chunk_size=CHUNK_SIZE, overlap=CHUNK_OVERL
 
 def stratified_split(df: pd.DataFrame, test_size=TEST_SIZE, val_size=VAL_SIZE, random_state=RANDOM_STATE):
     """Two-stage stratified split to preserve author distribution across train, val, and test sets"""
-    temp_frac = test_size + val_size        # 0.30
+    temp_frac = test_size + val_size
     train_df, holdout_df = train_test_split(
         df,
         test_size=temp_frac,
@@ -87,7 +84,7 @@ def stratified_split(df: pd.DataFrame, test_size=TEST_SIZE, val_size=VAL_SIZE, r
         stratify=df["author"]
     )
 
-    val_frac = val_size / temp_frac         # 0.50
+    val_frac = val_size / temp_frac
     val_df, test_df = train_test_split(
         holdout_df,
         test_size=val_frac,
@@ -137,11 +134,10 @@ def save_split_metadata(train_df, val_df, test_df, metrics_dir: str):
     path = os.path.join(metrics_dir, "split_metadata.json")
     with open(path, "w") as f:
         json.dump(meta, f, indent=2)
-    print(f"✓ Split metadata saved to {path}")
+    print(f"[+] Split metadata saved to {path}")
 
 def run():
     df = load_data(RAW_CSV)
-    # Perform chunking augmentation first
     augmented_df = chunk_text_data(df)
     
     train_df, val_df, test_df = stratified_split(augmented_df)

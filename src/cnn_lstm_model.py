@@ -17,38 +17,35 @@ def build_cnn_lstm(vocab_size: int, max_seq_length: int, num_classes: int,
     """
     inputs = Input(shape=(max_seq_length,))
     
-    # 1. Word representation with Spatial Dropout to kill phrase memorization
+    # spatial dropout to prevent phrase memorization
     x = Embedding(input_dim=vocab_size, output_dim=embedding_dim)(inputs)
     x = SpatialDropout1D(0.3)(x)
     
-    # 2. Convolutional Feature Extraction
+    # convolutional feature extraction
     cnn_out = Conv1D(filters=filters, kernel_size=kernel_size, activation='relu', padding='same')(x)
     cnn_out = BatchNormalization()(cnn_out)
     
-    # --- TRACK A: Temporal Sequential Pipeline ---
+    # temporal sequential pipeline
     pool_seq = MaxPooling1D(pool_size=2)(cnn_out)
     pool_seq = Dropout(dropout_rate)(pool_seq)
     lstm_out = LSTM(lstm_units, return_sequences=False)(pool_seq)
     lstm_out = Dropout(dropout_rate)(lstm_out)
     
-    # --- TRACK B: Global Stylistic Skip Connection (Mimics TF-IDF performance) ---
     global_pool = GlobalMaxPooling1D()(cnn_out)
     global_pool = Dropout(dropout_rate)(global_pool)
     
-    # 3. Concatenate structural sequence markers with static vocabulary preferences
     merged = concatenate([lstm_out, global_pool])
     
-    # 4. Dense Head Classification Head
     dense = Dense(64, activation='relu')(merged)
     dense = BatchNormalization()(dense)
     dense = Dropout(0.3)(dense)
     
     outputs = Dense(num_classes, activation='softmax')(dense)
     
-    # Build functional model
+    # build functional model
     model = Model(inputs=inputs, outputs=outputs)
     
-    # Compile with Adam
+    # compile with Adam
     optimizer = Adam(learning_rate=0.001)
     model.compile(optimizer=optimizer, 
                   loss='sparse_categorical_crossentropy', 
