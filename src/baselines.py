@@ -4,7 +4,6 @@ baselines.py
 Trains and evaluates traditional NLP baselines (BoW + TF-IDF with SVM
 and Logistic Regression) on the isiZulu authorship attribution dataset.
 
-This establishes the score that Diya's CNN-LSTM must beat in Sprint 2.
 
 Usage (from project root):
     python src/baselines.py
