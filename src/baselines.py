@@ -34,14 +34,14 @@ from sklearn.metrics import (
     precision_score, recall_score, confusion_matrix
 )
 
-# ── Paths ────────────────────────────────────────────────────────────────────
+# paths
 SPLITS_DIR   = os.path.join("data", "splits")
 FIGURES_DIR  = os.path.join("outputs", "figures")
 METRICS_DIR  = os.path.join("outputs", "metrics")
 RANDOM_STATE = 42
 MAX_FEATURES = 10000
 
-# Load the exact train/test partitions used throughout the project
+# load the train/test/validation partitions
 def load_splits():
     train_df = pd.read_csv(os.path.join(SPLITS_DIR, "train.csv"))
     val_df   = pd.read_csv(os.path.join(SPLITS_DIR, "val.csv")) 
@@ -49,18 +49,15 @@ def load_splits():
     print(f"[load]  train={len(train_df)}, test={len(test_df)}, val={len(val_df)}")
     return train_df, test_df 
 
-# Construct multiple traditional NLP baselines so the CNN-LSTM
-# can later be compared against both lexical and morphological models.
+# construction traditional nlp baselines
 def build_pipelines() -> dict:
     """
-    Five baseline pipelines covering all combinations from the proposal:
-      - BoW  (word n-grams) + SVM
-      - BoW  (char n-grams) + SVM
-      - TF-IDF (word n-grams) + SVM       ← typically the strongest
+    Five baseline pipelines:
+      - BoW (word n-grams) + SVM
+      - BoW (char n-grams) + SVM
+      - TF-IDF (word n-grams) + SVM
       - TF-IDF (char n-grams) + SVM
-            Captures subword morphology and stylistic spelling patterns,
-            which are especially important for agglutinative isiZulu text.
-      - TF-IDF (word n-grams) + LogReg    ← for comparison
+      - TF-IDF (word n-grams) + LogReg
     """
     return {
         "BoW_word_SVM": Pipeline([
@@ -90,9 +87,8 @@ def build_pipelines() -> dict:
                                         solver="lbfgs")),
         ]),
     }
-# Train and evaluate every baseline model under the same
-# conditions to produce fair benchmark comparisons.
 
+# evaluation of all baselines
 def evaluate_all(pipelines: dict, X_train, y_train, X_test, y_test,
                  label_names: list) -> dict:
     results = {}
@@ -132,8 +128,6 @@ def evaluate_all(pipelines: dict, X_train, y_train, X_test, y_test,
             "per_class":      report,
         }
 
-        # Macro F1 is the primary metric because the dataset is mildly
-        # imbalanced and every author should contribute equally to evaluation.
         print(f"\n── {name} ──")
         print(f"   F1 macro : {f1:.4f}")
         print(f"   Accuracy : {accuracy:.4f}")
@@ -162,12 +156,11 @@ def plot_comparison(results: dict, figures_dir: str):
     ax.set_xticklabels(names, rotation=25, ha="right", fontsize=10)
     ax.set_ylim(0, 1.0)
     ax.set_ylabel("Score", fontsize=12)
-    ax.set_title("Baseline model comparison — isiZulu authorship attribution",
+    ax.set_title("Baseline model comparison - isiZulu authorship attribution",
                  fontsize=13)
     ax.legend(fontsize=11)
     ax.spines[["top", "right"]].set_visible(False)
 
-    # Annotate bars
     for bar in bars1:
         ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.01,
                 f"{bar.get_height():.3f}", ha="center", va="bottom", fontsize=9)
@@ -179,7 +172,7 @@ def plot_comparison(results: dict, figures_dir: str):
     out = os.path.join(figures_dir, "baseline_comparison.png")
     plt.savefig(out, dpi=150)
     plt.close()
-    print(f"\n✓  Comparison chart saved → {out}")
+    print(f"\n[+]  Comparison chart saved → {out}")
 
 
 def plot_confusion_matrix(pipeline, X_test, y_test, label_names: list,
@@ -187,7 +180,7 @@ def plot_confusion_matrix(pipeline, X_test, y_test, label_names: list,
     """Confusion matrix heatmap for the best-performing model."""
     preds = pipeline.predict(X_test)
     cm    = confusion_matrix(y_test, preds , normalize="true")
-    short = [a.split()[-1] for a in label_names]   # last name only for brevity
+    short = [a.split()[-1] for a in label_names]
 
     fig, ax = plt.subplots(figsize=(9, 7))
     sns.heatmap(cm, annot=True, fmt=".2f", cmap="Blues",
@@ -195,7 +188,7 @@ def plot_confusion_matrix(pipeline, X_test, y_test, label_names: list,
                 linewidths=0.5, ax=ax, cbar_kws={"shrink": 0.8})
     ax.set_xlabel("Predicted author", fontsize=12)
     ax.set_ylabel("True author", fontsize=12)
-    ax.set_title(f"Confusion matrix — {model_name}", fontsize=13)
+    ax.set_title(f"Confusion matrix - {model_name}", fontsize=13)
     plt.xticks(rotation=30, ha="right")
     plt.yticks(rotation=0)
     plt.tight_layout()
@@ -203,7 +196,7 @@ def plot_confusion_matrix(pipeline, X_test, y_test, label_names: list,
     out   = os.path.join(figures_dir, fname)
     plt.savefig(out, dpi=150)
     plt.close()
-    print(f"✓  Confusion matrix saved → {out}")
+    print(f"[+]  Confusion matrix saved → {out}")
 
 
 def save_results(results: dict, metrics_dir: str, X_train, X_test):
@@ -222,17 +215,17 @@ def save_results(results: dict, metrics_dir: str, X_train, X_test):
     report_path = os.path.join(metrics_dir, "baseline_report.json")
     with open(report_path, "w") as f:
         json.dump(results, f, indent=2)
-    print(f"✓  Baseline report saved → {report_path}")
+    print(f"[+]  Baseline report saved → {report_path}")
 
     metadata_path = os.path.join(metrics_dir, "baseline_metadata.json")
     with open(metadata_path, "w") as f:
         json.dump(metadata, f, indent=2)
-    print(f"✓  Baseline metadata saved → {metadata_path}")
+    print(f"[+]  Baseline metadata saved → {metadata_path}")
 
 
 def print_summary_table(results: dict):
     print("\n" + "=" * 65)
-    print("SUMMARY TABLE  (paste this into your README)")
+    print("SUMMARY TABLE")
     print("=" * 65)
     print(f"{'Model':<22} {'F1 Macro':>9} {'Precision':>10} {'Recall':>8} {'Accuracy':>10}")
     print("-" * 65)
@@ -248,7 +241,6 @@ def print_summary_table(results: dict):
             best_name = name
     print("=" * 65)
     print(f"\n   Best baseline: {best_name}  (F1 macro = {best_f1:.4f})")
-    print(f"    CNN-LSTM (Sprint 2) must exceed F1 = {best_f1:.4f} to justify the approach.")
     return best_name
 
 

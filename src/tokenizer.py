@@ -1,13 +1,9 @@
 """
 tokenizer.py
 ------------
-Trains a Byte-Pair Encoding (BPE) tokenizer on the TRAINING split only
-(preventing data leakage), then encodes all three splits and pads them
-to a fixed sequence length determined from the 90th percentile of
-training lengths.
-
-Usage (from project root):
-    python src/tokenizer.py
+Trains a Byte-Pair Encoding (BPE) tokenizer on the TRAINING split only, 
+then encodes all three splits and pads them to a fixed sequence length 
+determined from the 90th percentile of training lengths.
 
 Outputs:
     outputs/bpe_tokenizer/tokenizer.json
@@ -23,7 +19,7 @@ import json
 import numpy as np
 import pandas as pd
 import matplotlib
-matplotlib.use("Agg")   # non-interactive backend for saving figures
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder
 from tokenizers import Tokenizer
@@ -31,7 +27,6 @@ from tokenizers.models import BPE
 from tokenizers.trainers import BpeTrainer
 from tokenizers.pre_tokenizers import Whitespace
 
-# ── Paths ──────────────────────────────────────────────────
 SPLITS_DIR    = os.path.join("data", "splits")
 TOKENIZER_DIR = os.path.join("outputs", "bpe_tokenizer")
 FIGURES_DIR   = os.path.join("outputs", "figures")
@@ -39,11 +34,10 @@ METRICS_DIR   = os.path.join("outputs", "metrics")
 
 TOKENIZER_PATH = os.path.join(TOKENIZER_DIR, "tokenizer.json")
 
-# ── Hyper-parameters ───────────────────────────────────────────────────────
-# Small vocabulary prevents memorizing entire isiZulu words
-# and encourages meaningful subword learning on a tiny corpus.
+# HYPERPARAMETERS
+# small vocabulary prevents memorizing entire isiZulu words and encourages meaningful subword learning on a tiny corpus.
 VOCAB_SIZE     = 3000   
-MIN_FREQUENCY  = 2      # ignore tokens appearing only once in training set
+MIN_FREQUENCY  = 2 # ignore tokens appearing only once in training set
 # 95th percentile balances:
 # - reducing truncation of long articles
 # - avoiding excessive padding overhead
@@ -58,39 +52,27 @@ def load_splits():
     print(f"[load]  train={len(train)}, val={len(val)}, test={len(test)}")
     return train, val, test
 
-# Learns a subword vocabulary from training texts only so the
-# model can represent isiZulu morphology without leaking
-# information from validation or test sets.
-
 def train_bpe_tokenizer(train_texts: list) -> Tokenizer:
     """
-    Train BPE on training texts only(Important).
-
-    Why train-only?
-    ---------------
-    If we train the tokenizer on all 157 articles and then split, the
-    tokenizer has 'seen' validation and test vocabulary, which is a form
-    of data leakage. The tokenizer must learn from training data only,
-    exactly as the model will.
+    Train BPE on training texts only.
     """
     print(f"\n[BPE]   Training tokenizer on {len(train_texts)} articles …")
     print(f"        vocab_size={VOCAB_SIZE}, min_frequency={MIN_FREQUENCY}")
 
     tokenizer = Tokenizer(BPE(unk_token="[UNK]"))
-    # Preserve word boundaries before BPE learns subword merges.
-    # This is important for isiZulu morphology and stylistic patterns.
+    # preserve word boundaries before BPE learns subword merges
     tokenizer.pre_tokenizer = Whitespace()
 
     bpe_trainer = BpeTrainer(
         vocab_size=VOCAB_SIZE,
         min_frequency=MIN_FREQUENCY,
-        # [UNK] handles unseen subwords during inference.
-        # [PAD] enables fixed-length batching for neural networks.
+        # [UNK] handles unseen subwords during inference
+        # [PAD] enables fixed-length batching for neural networks
         special_tokens=["[UNK]", "[PAD]"],
         show_progress=True,
     )
 
-    # Asserts before training
+    # asserts before training
     assert len(train_texts) > 0, \
     "Training corpus is empty"
     assert all(isinstance(text, str) for text in train_texts), \
@@ -98,28 +80,22 @@ def train_bpe_tokenizer(train_texts: list) -> Tokenizer:
 
     tokenizer.train_from_iterator(train_texts, trainer=bpe_trainer)
 
-    #Asserts after training
-    
+    # asserts after training
     assert tokenizer.get_vocab_size() > 2, \
     "Tokenizer vocabulary was not learned correctly"
 
     return tokenizer
 
-# Save tokenizer state so future experiments use identical
-# token-to-ID mappings for reproducibility.
+# save tokenizer state
 def save_tokenizer(tokenizer: Tokenizer):
     os.makedirs(TOKENIZER_DIR, exist_ok=True)
     tokenizer.save(TOKENIZER_PATH)
     print(f"  Tokenizer saved → {TOKENIZER_PATH}")
 
-# Convert subword tokens into integer IDs because neural
-# networks operate on numerical representations, not strings.
 def encode_split(texts: list, tokenizer: Tokenizer) -> list:
     """Return list of integer-id sequences (variable length)."""
     return [tokenizer.encode(text).ids for text in texts]
 
-# Use percentile instead of absolute max to prevent a few
-# unusually long articles from causing excessive padding.
 def analyse_lengths(train_seqs: list, percentile: int = PERCENTILE) -> int:
     """
     Analyze tokenized sequence lengths and choose an efficient
@@ -146,7 +122,7 @@ def analyse_lengths(train_seqs: list, percentile: int = PERCENTILE) -> int:
           f"max={max(sequence_lengths)}, {percentile}th pct={max_sequence_length}")
     print(f"           → MAX_SEQ_LEN set to {max_sequence_length}")
 
-    # Visualize the distribution of sequence lengths to confirm the percentile choice.  
+    # visualize the distribution of sequence lengths to confirm the percentile choice
     os.makedirs(FIGURES_DIR, exist_ok=True)
     fig, ax = plt.subplots(figsize=(9, 4))
     ax.hist(sequence_lengths, bins=30, color="#4A90D9", edgecolor="white", alpha=0.85)
@@ -179,8 +155,6 @@ def analyse_lengths(train_seqs: list, percentile: int = PERCENTILE) -> int:
 
     return max_sequence_length
 
-#Convert variable-length token sequences into fixed-size tensors
-#that can be efficiently batched and processed by neural networks.
 def pad_and_truncate(sequences: list, max_sequence_length: int, pad_id: int = 1) -> np.ndarray:
     """
     Convert variable-length token-ID sequences into fixed-size
@@ -194,9 +168,9 @@ def pad_and_truncate(sequences: list, max_sequence_length: int, pad_id: int = 1)
     must be able to distinguish padding from real content.
 
     Inputs:
-        sequences : list of token-ID sequences
-        max_sequence_length   : fixed output sequence length
-        pad_id    : integer ID representing [PAD]
+        sequences: list of token-ID sequences
+        max_sequence_length: fixed output sequence length
+        pad_id: integer ID representing [PAD]
 
     Outputs:
         NumPy array of shape (num_sequences, max_sequence_length)
@@ -206,23 +180,17 @@ def pad_and_truncate(sequences: list, max_sequence_length: int, pad_id: int = 1)
         - tokenizer reserves pad_id for [PAD] training.
     """
 
-    # Pre-fill tensor with [PAD] tokens so shorter sequences
-    # automatically contain padding in unused positions.
+
     padded_sequences = np.full((len(sequences), max_sequence_length), fill_value=pad_id, dtype=np.int32)
 
-    #Assertion 
     assert padded_sequences.shape == (len(sequences), max_sequence_length)
     
     for i, seq in enumerate(sequences):
-        #Truncate overly long sequences to maintain fixed tensor size.
         length = min(len(seq), max_sequence_length)
 
-        # Copy real token IDs into the padded tensor while preserving order.
         padded_sequences[i, :length] = seq[:length]
     return padded_sequences
 
-#Convert categorical author identities into numerical class IDs
-#supervised learning algorithms can optimize against.
 def encode_labels(train_df, val_df, test_df):
     """
     Convert author names into integer class labels for supervised learning.
@@ -252,25 +220,21 @@ def encode_labels(train_df, val_df, test_df):
     assert set(test_df["author"]).issubset(set(train_df["author"])), \
         "Test set contains unseen authors"
 
-    # Learn a stable mapping from author names to integer class IDs.
     y_train = le.fit_transform(train_df["author"])
-    # Reuse the exact same class mapping for validation and test sets.
     y_val   = le.transform(val_df["author"])
     y_test  = le.transform(test_df["author"])
     print(f"\n[labels]  Classes: {list(le.classes_)}")
     return le, y_train, y_val, y_test
 
-#Visually inspect whether BPE learned linguistically meaningful
-#subword structures instead of arbitrary or broken segmentations.
 def inspect_bpe_segmentations(train_df, tokenizer, n=3):
     """
-    Print example tokenizations so you can verify BPE is splitting
+    Print example tokenizations to verify BPE is splitting
     isiZulu morphemes (prefixes, suffixes) correctly.
 
     Inputs:
-    train_df : dataframe containing training articles
-    tokenizer: trained BPE tokenizer
-    n        : number of authors/examples to display
+    - train_df: dataframe containing training articles
+    - tokenizer: trained BPE tokenizer
+    - n: number of authors/examples to display
 
     Outputs:
         Printed tokenization examples
@@ -287,7 +251,7 @@ def inspect_bpe_segmentations(train_df, tokenizer, n=3):
 
         # Use a short snippet so tokenization patterns remain readable.
         snippet = " ".join(text.split()[:15])  # first 15 words
-        # Inspect how the tokenizer segments real isiZulu text into subwords.
+
         encoded_snippet = tokenizer.encode(snippet) 
         tokens   = encoded_snippet.tokens
         ids      = encoded_snippet.ids
@@ -297,9 +261,6 @@ def inspect_bpe_segmentations(train_df, tokenizer, n=3):
         print(f"IDs    : {ids}")
     print("=" * 60)
 
-#Measure whether the tokenizer produces efficient, meaningful,
-#and information-preserving sequence representations for
-#authorship attribution.
 def evaluate_tokenizer(tokenizer, train_seqs, val_seqs, test_seqs,
                        train_texts, val_texts, test_texts,
                        max_sequence_length):
@@ -321,11 +282,9 @@ def evaluate_tokenizer(tokenizer, train_seqs, val_seqs, test_seqs,
     # ------------------------------------------------------------
     # 1. UNK RATE
     # ------------------------------------------------------------
-    # Needed to measure how often the tokenizer fails
-    # to represent unseen text fragments.
+    # Needed to measure how often the tokenizer fails to represent unseen text fragments.
     unk_id = tokenizer.token_to_id("[UNK]")
 
-    #assert unk_id is not None
     assert unk_id is not None, \
     "[UNK] token missing from tokenizer"
 
@@ -350,8 +309,6 @@ def evaluate_tokenizer(tokenizer, train_seqs, val_seqs, test_seqs,
     total_words = sum(len(text.split()) for text in all_texts)
 
     # Higher fertility means words are split into more subwords.
-    # Extremely high fertility may indicate over-fragmentation.
-
     fertility = total_tokens / total_words
 
     print(f"[fertility]         {fertility:.2f} subwords/word")
@@ -383,7 +340,6 @@ def evaluate_tokenizer(tokenizer, train_seqs, val_seqs, test_seqs,
 
     print("=" * 60)
 
-    # Return metrics for saving later
     return {
         "unk_rate_percent": round(unk_rate, 4),
         "fertility": round(fertility, 4),
@@ -394,7 +350,7 @@ def evaluate_tokenizer(tokenizer, train_seqs, val_seqs, test_seqs,
 def save_arrays(X_train, X_val, X_test, y_train, y_val, y_test,
                 le, max_sequence_length, tokenizer, tokenizer_metrics):
     """
-    Persist processed datasets and experiment metadata to disk.
+    Persist processed datasets and experiment metadata.
 
     Saves:
     - padded token-ID tensors
@@ -411,18 +367,16 @@ def save_arrays(X_train, X_val, X_test, y_train, y_val, y_test,
     np.save(os.path.join(SPLITS_DIR, "y_train.npy"), y_train)
     np.save(os.path.join(SPLITS_DIR, "y_val.npy"),   y_val)
     np.save(os.path.join(SPLITS_DIR, "y_test.npy"),  y_test)
-    print(f"\n✓  Arrays saved to {SPLITS_DIR}/")
+    print(f"\n[+]  Arrays saved to {SPLITS_DIR}/")
     print(f"   X_train shape: {X_train.shape}")
     print(f"   X_val   shape: {X_val.shape}")
     print(f"   X_test  shape: {X_test.shape}")
 
-    # Label classes JSON (needed by Diya for the CNN-LSTM)
     label_path = os.path.join(SPLITS_DIR, "label_classes.json")
     with open(label_path, "w") as f:
         json.dump(list(le.classes_), f, indent=2)
-    print(f"✓  Label classes saved → {label_path}")
+    print(f"[+]  Label classes saved → {label_path}")
 
-    # Tokenizer metadata
     os.makedirs(METRICS_DIR, exist_ok=True)
     meta = {
         "vocab_size":    VOCAB_SIZE,
@@ -440,37 +394,35 @@ def save_arrays(X_train, X_val, X_test, y_train, y_val, y_test,
     meta_path = os.path.join(METRICS_DIR, "tokenizer_metadata.json")
     with open(meta_path, "w") as f:
         json.dump(meta, f, indent=2)
-    print(f"✓  Tokenizer metadata saved → {meta_path}")
+    print(f"[+]  Tokenizer metadata saved → {meta_path}")
 
 
 def run():
     train_df, val_df, test_df = load_splits()
 
-    # --- BPE training (train split only) ---
+    # bpe training (train split only)
     tokenizer = train_bpe_tokenizer(train_df["text"].tolist())
     save_tokenizer(tokenizer)
 
-    # --- Encode ---
     train_seqs = encode_split(train_df["text"].tolist(), tokenizer)
     val_seqs   = encode_split(val_df["text"].tolist(),   tokenizer)
     test_seqs  = encode_split(test_df["text"].tolist(),  tokenizer)
 
-    # --- Length analysis and MAX_SEQ_LEN decision ---
     max_sequence_length = analyse_lengths(train_seqs)
 
-    # --- Padding ---
-    pad_id  = tokenizer.token_to_id("[PAD]")# Retrieve tokenizer-defined padding token ID.
+    # padding
+    pad_id  = tokenizer.token_to_id("[PAD]")
     X_train = pad_and_truncate(train_seqs, max_sequence_length, pad_id)
     X_val   = pad_and_truncate(val_seqs,   max_sequence_length, pad_id)
     X_test  = pad_and_truncate(test_seqs,  max_sequence_length, pad_id)
 
-    # --- Labels ---
+    # labels
     le, y_train, y_val, y_test = encode_labels(train_df, val_df, test_df)
 
-    # --- Show examples of BPE segmentations ---
+    # show examples of BPE segmentations
     inspect_bpe_segmentations(train_df, tokenizer)
     
-    # --- Evaluate tokenizer ---
+    # evaluate tokenizer
     tokenizer_metrics = evaluate_tokenizer(
         tokenizer,
         train_seqs,
@@ -482,7 +434,7 @@ def run():
         max_sequence_length
     )
 
-    # --- Save everything ---
+    # save everything
     save_arrays(X_train, X_val, X_test, y_train, y_val, y_test,
                 le, max_sequence_length, tokenizer , tokenizer_metrics)
 

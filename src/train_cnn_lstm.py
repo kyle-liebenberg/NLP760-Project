@@ -23,7 +23,6 @@ from sklearn.metrics import classification_report, f1_score, accuracy_score, pre
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
 from cnn_lstm_model import build_cnn_lstm
 
-# ── Paths ──────────────────────────────────────────────────
 SPLITS_DIR  = os.path.join("data", "splits")
 METRICS_DIR = os.path.join("outputs", "metrics")
 MODELS_DIR  = "models"
@@ -33,7 +32,7 @@ def main():
     
     print("\nLoading data and metadata...")
     
-    # 1. Load Tokenizer Metadata (dynamically gets vocab size & seq length)
+    # load tokenizer metadata
     with open(os.path.join(METRICS_DIR, "tokenizer_metadata.json"), "r") as f:
         meta = json.load(f)
         
@@ -42,7 +41,7 @@ def main():
     num_classes = meta["num_classes"]
     label_classes = meta["classes"]
     
-    # 2. Load Numpy Arrays
+    # load numpy arrays
     X_train = np.load(os.path.join(SPLITS_DIR, "X_train.npy"))
     y_train = np.load(os.path.join(SPLITS_DIR, "y_train.npy"))
     X_val   = np.load(os.path.join(SPLITS_DIR, "X_val.npy"))
@@ -52,38 +51,37 @@ def main():
 
     print(f"Data loaded! Train size: {X_train.shape[0]}, Val size: {X_val.shape[0]}, Test size: {X_test.shape[0]}")
 
-    # 3. Build Model
+    # build model
     print("\nBuilding CNN-LSTM Architecture...")
     model = build_cnn_lstm(vocab_size=vocab_size, max_seq_length=max_seq_len, num_classes=num_classes)
     model.summary()
 
-    # 4. Define Callbacks (Inside src/train_cnn_lstm.py)
+    # define callbacks
     model_save_path = os.path.join(MODELS_DIR, "cnn_lstm_best.keras")
     
-    # Extended patience to 8 so it gives the network breathing room to optimize
+    # extended patience to 8 so it gives the network breathing room to optimize
     early_stopping = EarlyStopping(monitor='val_loss', patience=8, restore_best_weights=True, verbose=1)
     checkpoint = ModelCheckpoint(model_save_path, monitor='val_loss', save_best_only=True, verbose=1)
     
-    # Scales learning rate down if validation progress stalls for 3 epochs
+    # scales learning rate down if validation progress stalls for 3 epochs
     lr_scheduler = ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=3, min_lr=1e-5, verbose=1)
 
-    # 5. Train Model
+    # train model
     print("\nStarting Training Loop...")
     history = model.fit(
         X_train, y_train,
         validation_data=(X_val, y_val),
-        epochs=40,           # Bumped to 40 since learning rate adjustment extends training life
+        epochs=40, 
         batch_size=32,       
-        callbacks=[early_stopping, checkpoint, lr_scheduler], # Added scheduler here
+        callbacks=[early_stopping, checkpoint, lr_scheduler],
         verbose=1
     )
 
-    # 6. Evaluate on Test Set
+    # evaluate on test set
     print("\n" + "=" * 60)
     print("DEEP LEARNING MODEL EVALUATION (TEST SET)")
     print("=" * 60)
     
-    # Predict probabilities, then take the argmax to get the predicted integer class
     y_pred_probs = model.predict(X_test)
     y_pred = np.argmax(y_pred_probs, axis=1)
 
@@ -99,7 +97,7 @@ def main():
     print("\nDetailed Report:")
     print(classification_report(y_test, y_pred, target_names=label_classes, zero_division=0))
 
-    # Save results to metrics folder
+    # save results
     dl_results = {
         "f1_macro": round(f1, 4),
         "precision_macro": round(precision, 4),
@@ -110,8 +108,8 @@ def main():
     with open(os.path.join(METRICS_DIR, "dl_report.json"), "w") as f:
         json.dump(dl_results, f, indent=2)
         
-    print(f"✓ Model saved to {model_save_path}")
-    print(f"✓ Evaluation metrics saved to {METRICS_DIR}/dl_report.json")
+    print(f"[+] Model saved to {model_save_path}")
+    print(f"[+] Evaluation metrics saved to {METRICS_DIR}/dl_report.json")
 
 if __name__ == "__main__":
     main()
